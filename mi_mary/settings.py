@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'barbershop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'Mi_Mary_Base.sqlite3',
     }
 }
 
