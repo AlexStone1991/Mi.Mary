@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
-ROOT_URLCONF = 'barbershop.urls'
+ROOT_URLCONF = 'mi_mary.urls'
 
 TEMPLATES = [
     {
@@ -63,17 +63,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                "core.context_processors.menu_items"
+                # "core.context_processors.menu_items"
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'barbershop.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+WSGI_APPLICATION = 'mi_mary.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -102,9 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
 LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = "Europe/Moscow"
@@ -114,8 +107,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS  = [BASE_DIR / 'static']
@@ -123,8 +114,6 @@ STATICFILES_DIRS  = [BASE_DIR / 'static']
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -147,9 +136,9 @@ MISTRAL_MODERATIONS_GRADES = {
 TELEGRAM_BOT_API_KEY = os.getenv("TELEGRAM_BOT_API_KEY")
 TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
 
-LOGIN_URL = reverse_lazy("login")
-LOGIN_REDIRECT_URL = reverse_lazy("landing")
-LOGOUT_REDIRECT_URL = reverse_lazy("landing")
+# LOGIN_URL = reverse_lazy("login")
+# LOGIN_REDIRECT_URL = reverse_lazy("/")
+# LOGOUT_REDIRECT_URL = reverse_lazy("/")
 
 # Новая модель пользователя users.models.CustomUser
 AUTH_USER_MODEL = "users.CustomUser"
