@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Шапка с баннером -->
+<section class="hero-section text-center py-5" >
+    <div class="container">
+        <h1 class="display-4 text-black animate__animated animate__fadeInDown" style="font-family: 'Dancing Script', cursive; font-size: 13rem;">Mi Mary</h1>
+        <h2 class="lead text-black">Студия красоты в Новомосковске</h2>
+    </div>
+</section>
+
+<!-- Раздел "О нас" -->
+<section id="about" >
+    <div class="container">
+        <h2 class="text-center mb-4">О нас</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'images/eyes_butterflies.jpg' %}" alt="Mi Mary" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <p>Добро пожаловать в салон красоты "Mi Mary"! Мы специализируемся на создании неповторимого образа для каждого клиента.</p>
+                <p>Наши мастера используют только профессиональные средства и современные техники.</p>
+                <p>Вы всегда красивы, а мы поможем вам сиять ещё ярче!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Раздел "Услуги" -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Наши услуги</h2>
+        <div class="row">
+            {% for service in popular_services %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    {% if service.image %}
+                        <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ service.name }}</h5>
+                        <p class="card-text">{{ service.description|truncatewords:10 }}</p>
+                        <p class="text-success">{{ service.price }} ₽</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Раздел "Отзывы" -->
+<section id="reviews">
+    <div class="container">
+        <h2 class="text-center mb-4">Отзывы</h2>
+        <div class="row">
+            {% for review in reviews %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-2">
+                            <h5 class="card-title mb-0">{{ review.client_name }}</h5>
+                            <div class="ms-auto">
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= review.rating %}
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-warning"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <p class="card-text">{{ review.text }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if not show_all and total_reviews > 6 %}
+        <div class="text-center mt-4">
+            <a href="?show_all=true" class="btn btn-outline-primary">Показать все отзывы</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Подвал -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Mi Mary</h5>
+                <p>Студия красоты</p>
+                <p><i class="bi bi-geo-alt"></i> Ул. Маяковского, 25, офис 232, Новомосковск</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Контакты</h5>
+                <p><i class="bi bi-telephone"></i> <a href="tel:+79509696635" class="text-white">+7 (950) 969-66-35</a></p>
+                <p><i class="bi bi-envelope"></i> mi.mary.nmsk@mail.ru</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Социальные сети</h5>
+                <p><i class="bi bi-telegram"></i> <a href="https://t.me/mi_mary_nmsk" class="text-white">Telegram</a></p>
+                <p><i class="bi bi-vk"></i> <a href="https://vk.com/mi.mary.nmsk71" class="text-white">VK</a></p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2025 Mi Mary. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Создать заявку</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('id_master').addEventListener('change', function() {
+    const masterId = this.value;
+    fetch(`/api/master/${masterId}/services/`)
+        .then(response => response.json())
+        .then(data => {
+            const servicesSelect = document.getElementById('id_services');
+            servicesSelect.innerHTML = '';
+            data.services.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.id;
+                option.textContent = service.name;
+                servicesSelect.appendChild(option);
+            });
+        });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,65 @@
+.nav-block {
+        margin: 0 5px;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    .nav-block:hover {
+        background-color: #f8f9fa;
+    }
+    .nav-block-content {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .hero-section {
+        min-height: 500px;
+    }
+    .card {
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+.navbar {
+    background: rgba(255, 0, 0, 0.053) !important;
+    backdrop-filter: blur(1px);
+}
+
+.nav-link {
+    color: rgba(255, 254, 254, 0.053) !important;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: black;
+}
+/* Эффект при наведении на пункты меню */
+.nav-link:hover {
+    color: #6c757d !important; /* Серый цвет при наведении */
+}
+
+/* Подчёркивание при наведении */
+.nav-link {
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #6c757d;
+}
+
+

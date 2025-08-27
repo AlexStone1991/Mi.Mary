@@ -20,9 +20,6 @@ from django.views.generic import (
     TemplateView,
 )
 
-class AboutView(TemplateView):
-    template_name = "about.html"
-
 class LandingView(TemplateView):
     template_name = 'landing.html'
 
@@ -31,7 +28,7 @@ class LandingView(TemplateView):
         show_all = self.request.GET.get('show_all', False)
 
         # Отзывы с пользователями (оптимизировано)
-        all_reviews = Review.objects.filter(status="published").select_related('user')
+        all_reviews = Review.objects.filter(status="published")
         total_reviews = all_reviews.count()
         reviews = all_reviews[:6] if not show_all else all_reviews
 
@@ -45,3 +42,71 @@ class LandingView(TemplateView):
             'popular_services': popular_services,
         })
         return context
+
+class ThanksViews(TemplateView):
+    template_name = 'thanks.html'
+
+@method_decorator(login_required, name="dispatch")
+class OrdersListView(ListView):
+    model = Order
+    template_name = "orders_list.html"
+    context_object_name = "orders"
+    ordering = ["-date_created"]
+
+    def get_queryset(self):
+        queryset = super().get_queryset().prefetch_related("services")
+        search_query = self.request.GET.get("q", "")
+        search_fields = self.request.GET.getlist("search_fields", ["client_name"])
+
+        if search_query:
+            q_objects = Q()
+            if "client_name" in search_fields:
+                q_objects |= Q(client_name__icontains=search_query)
+            if "phone" in search_fields:
+                q_objects |= Q(phone__icontains=search_query)
+            if "comment" in search_fields:
+                q_objects |= Q(comment__icontains=search_query)
+            queryset = queryset.filter(q_objects)
+
+        return queryset
+
+@method_decorator(login_required, name="dispatch")
+class OrderDetailView(DetailView):
+    model = Order
+    template_name = "order_detail.html"
+    context_object_name = "order"
+
+    def get_queryset(self):
+        return super().get_queryset().prefetch_related("services").annotate(total_price=Sum("services__price"))
+    
+class ServicesListView(TemplateView):
+    template_name = "service_list.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            "services": Service.objects.all(),
+            "form": OrderForm(),
+            "min_date": timezone.now().strftime('%Y-%m-%dT%H:%M')
+        })
+        return context
+    
+class ReviewCreateView(CreateView):
+    model = Review
+    form_class = ReviewForm
+    template_name = 'create_review.html'
+    success_url = reverse_lazy('thanks')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Ваш отзыв отправлен на модерацию")
+        return super().form_valid(form)
+    
+class OrderCreateView(CreateView):
+    model = Order
+    form_class = OrderForm
+    template_name = 'create_order.html'
+    success_url = reverse_lazy('thanks')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Заявка успешно отправлена!")
+        return super().form_valid(form)

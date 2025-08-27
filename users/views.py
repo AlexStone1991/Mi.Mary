@@ -95,7 +95,7 @@ class UserRegistrationView(CreateView):
         return super().form_invalid(form)
     
     def get_context_data(self, **kwargs):
-        context = super().get_context_date(**kwargs)
+        context = super().get_context_data(**kwargs)
         context["operation_type"] = "Регистрация"
         return context
     
@@ -103,7 +103,7 @@ class UserRegistrationView(CreateView):
 class UserLoginView(LoginView):
     form_class = UserLoginForm
     template_name = "users_login_registr.html"
-    success_url = reverse_lazy("services-list")
+    success_url = reverse_lazy("landing")
     success_message = "Вы успешно вошли в систему!"
 
     def form_valid(self, form):
