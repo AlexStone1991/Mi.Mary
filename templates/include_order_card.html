@@ -1,0 +1,43 @@
+<div class="flex-card">
+    <h2>Заявка #{{ order.id }}</h2>
+    
+    <div class="mb-3">
+        <p><i class="bi bi-person"></i> <strong>{{ order.client_name }}</strong></p>
+        <p><i class="bi bi-telephone"></i> {{ order.phone }}</p>
+    </div>
+    
+    <div class="mb-3">
+        <p><i class="bi bi-calendar-date"></i> {{ order.appointment_date|date:"d.m.Y H:i" }}</p>
+        <p>
+            <i class="bi bi-tags"></i> Статус: 
+            <span class="badge bg-{{ order.status }}">
+                {{ order.get_status_display }}
+            </span>
+        </p>
+    </div>
+    
+    <div class="mb-3">
+        <p><i class="bi bi-scissors"></i> Услуги ({{ order.services.count }}):</p>
+        <div class="services">
+            {% for service in order.services.all %}
+                <span class="badge bg-secondary">
+                    {{ service.name }} ({{ service.price }}₽)
+                </span>
+            {% empty %}
+                <span class="text-muted">Нет услуг</span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% if order.comment %}
+    <div class="alert alert-light mt-3">
+        <i class="bi bi-chat-left-text"></i> {{ order.comment }}
+    </div>
+    {% endif %}
+    
+    <div class="text-center mt-4">
+        <a href="{% url 'order_detail' order.id %}" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-right-circle"></i> Подробнее
+        </a>
+    </div>
+</div>

@@ -38,6 +38,11 @@ class ServiceForm(BaseBootstrapForm):
         }
 
 class OrderForm(BaseBootstrapForm):
+    services = forms.ModelMultipleChoiceField(
+        queryset=Service.objects.all(),  
+        widget=forms.CheckboxSelectMultiple,
+        required=True
+    )
     class Meta:
         model = Order
         fields = ["client_name", "phone", "comment", "appointment_date", "services"]
@@ -56,7 +61,7 @@ class OrderForm(BaseBootstrapForm):
                 'placeholder': 'Комментарий к заказу'
             }),
             'services': forms.CheckboxSelectMultiple(
-                attrs={'class': 'form-control'}
+                attrs={'class': 'form-check-input'}
             ),
 
             'appointment_date': forms.DateTimeInput(attrs={

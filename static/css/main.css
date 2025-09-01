@@ -61,5 +61,25 @@
 .nav-link:hover {
     border-bottom: 2px solid #6c757d;
 }
+    .btn-custom {
+        background-color: #8B4513; /* Цвет шоколадный */
+        color: white;
+        border: none;
+    }
+    .btn-custom:hover {
+        background-color: #A0522D; /* Темнее при наведении */
+        color: white;
+    }
+    .card {
+        border: none;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card-footer {
+        background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+    }
+
 
 

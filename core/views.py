@@ -1,7 +1,7 @@
 from .models import Order, Service, Review
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-# from core.context_processors import menu_items
+from core.context_processors import menu_items
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 from django.db.models import Q, Count, Sum, Prefetch
@@ -100,13 +100,28 @@ class ReviewCreateView(CreateView):
     def form_valid(self, form):
         messages.success(self.request, "Ваш отзыв отправлен на модерацию")
         return super().form_valid(form)
-    
+
 class OrderCreateView(CreateView):
     model = Order
     form_class = OrderForm
-    template_name = 'create_order.html'
     success_url = reverse_lazy('thanks')
 
     def form_valid(self, form):
-        messages.success(self.request, "Заявка успешно отправлена!")
-        return super().form_valid(form)
+        response = super().form_valid(form)
+        if self.request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse({'success': True})
+        return response
+
+    def form_invalid(self, form):
+        if self.request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse({'success': False, 'errors': form.errors}, status=400)
+        return super().form_invalid(form)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            "services": Service.objects.all(),
+            "min_date": timezone.now().strftime('%Y-%m-%dT%H:%M')
+        })
+        return context
+

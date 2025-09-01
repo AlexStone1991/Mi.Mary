@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-warning">
+            <h2>Детали заказа #{{ order.id }}</h2>
+        </div>
+        <div class="card-body">
+            <!-- Основная информация о заказе -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <p><strong>Клиент:</strong> {{ order.client_name }}</p>
+                    <p><strong>Телефон:</strong> {{ order.phone }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Дата записи:</strong> {{ order.appointment_date|date:"d.m.Y H:i" }}</p>
+                    <p><strong>Статус:</strong> 
+                        <span class="badge bg-{{ order.status }}">
+                            {{ order.get_status_display }}
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Список услуг -->
+            <h4 class="mb-3">Выбранные услуги</h4>
+            <ul class="list-group mb-4">
+                {% for service in order.services.all %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="mb-1">{{ service.name }}</h6>
+                    </div>
+                    <span class="badge bg-primary rounded-pill">{{ service.price }}₽</span>
+                </li>
+                {% endfor %}
+                
+                <div class="alert alert-warning">
+                <h5 class="mb-0">Итого к оплате: {{ order.total_price|default:0 }}₽</h5>
+            </div>
+                <li class="list-group-item list-group-item-warning d-flex justify-content-between">
+                    <strong>Итого:</strong>
+                    <strong>
+                        {% with total=order.services.all %}
+                            {{ total|length }} услуг на {{ order.total_price|default:0 }}₽
+                        {% endwith %}
+                    </strong>
+                </li>
+            </ul>
+
+            <!-- Дополнительная информация -->
+            {% if order.comment %}
+            <div class="alert alert-light">
+                <h5>Комментарий:</h5>
+                <p>{{ order.comment }}</p>
+            </div>
+            {% endif %}
+
+            <a href="{% url 'orders' %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Назад к списку заявок
+            </a>
+        </div>
+    </div>
+
+<!-- Прогресс-бар статуса заказа -->
+<div class="progress mb-4" style="height: 20px;">
+  <div class="progress-bar 
+    {% if order.status == 'new' %}bg-warning
+    {% elif order.status == 'confirmed' %}bg-info
+    {% elif order.status == 'completed' %}bg-success
+    {% else %}bg-danger{% endif %}" 
+    style="width: 
+    {% if order.status == 'new' %}25%
+    {% elif order.status == 'confirmed' %}50%
+    {% elif order.status == 'completed' %}100%
+    {% else %}100%{% endif %}">
+    {{ order.get_status_display }}
+  </div>
+</div>
+</div>
+{% endblock %}

@@ -29,11 +29,11 @@ class Order(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
     date_updated = models.DateTimeField(auto_now=True, verbose_name="Дата обновления")
     services = models.ManyToManyField(Service, related_name="orders", verbose_name="Услуги")
-    appointment_date = models.DateField(verbose_name="Дата и время записи")
+    appointment_date = models.DateTimeField(verbose_name="Дата и время записи")
 
     def __str__(self):
         return f"Заказ {self.id} - {self.client_name}"
-    
+
     class Meta:
         verbose_name = "Заказ"
         verbose_name_plural = "Заказы"

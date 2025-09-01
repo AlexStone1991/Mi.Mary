@@ -17,12 +17,12 @@
                             {% endif %}
                         </div>
                         <div class="col-md-8">
-                            <p><strong>Имя пользователя:</strong> {{ user_obj.username }}</p>
-                            <p><strong>Email:</strong> {{ user_obj.email }}</p>
-                            <p><strong>Телефон:</strong> {{ user_obj.phone|default:"Не указан" }}</p>
-                            <p><strong>Дата рождения:</strong> {{ user_obj.birthday|date:"d.m.Y"|default:"Не указана" }}</p>
-                            <p><strong>VK ID:</strong> {{ user_obj.vk_id|default:"Не указан" }}</p>
-                            <p><strong>Telegram ID:</strong> {{ user_obj.tg_id|default:"Не указан" }}</p>
+                            <p><strong>Имя пользователя:</strong> {{ user_profile.username }}</p>
+                            <p><strong>Email:</strong> {{ user_profile.email }}</p>
+                            <p><strong>Телефон:</strong> {{ user_profile.phone|default:"Не указан" }}</p>
+                            <p><strong>Дата рождения:</strong> {{ user_profile.birthday|date:"d.m.Y"|default:"Не указана" }}</p>
+                            <p><strong>VK ID:</strong> {{ user_profile.vk_id|default:"Не указан" }}</p>
+                            <p><strong>Telegram ID:</strong> {{ user_profile.tg_id|default:"Не указан" }}</p>
                             <div class="d-flex gap-2">
                                 <a href="{% url 'profile_edit' %}" class="btn btn-primary">Редактировать профиль</a>
                                 <a href="{% url 'change_password' %}" class="btn btn-warning">Сменить пароль</a>

@@ -136,9 +136,9 @@ MISTRAL_MODERATIONS_GRADES = {
 TELEGRAM_BOT_API_KEY = os.getenv("TELEGRAM_BOT_API_KEY")
 TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
 
-# LOGIN_URL = reverse_lazy("login")
-# LOGIN_REDIRECT_URL = reverse_lazy("/")
-# LOGOUT_REDIRECT_URL = reverse_lazy("/")
+LOGIN_URL = reverse_lazy("login")
+LOGIN_REDIRECT_URL = reverse_lazy("landing")
+LOGOUT_REDIRECT_URL = reverse_lazy("landing")
 
 # Новая модель пользователя users.models.CustomUser
 AUTH_USER_MODEL = "users.CustomUser"

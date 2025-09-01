@@ -14,7 +14,7 @@ class UserProfileUpdateForm(forms.ModelForm):
         super().__init__(*args, **kwarge)
         for field_name, field in self.fields.items():
             field.widget.attrs.update({"class": "form-control"})
-            if field_name == "birthdat":
+            if field_name == "birthday":
                 field.widget = forms.DateInput(attrs={"type": "date", "class": "form-control"})
 
 class CustomSetPasswordForm(SetPasswordForm):
