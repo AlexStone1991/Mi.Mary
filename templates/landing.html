@@ -3,7 +3,7 @@
 
 {% block content %}
 <!-- Шапка с баннером -->
-<section class="hero-section text-center py-5" >
+<section class="text-center py-5" >
     <div class="container">
         <h1 class="display-4 text-black animate__animated animate__fadeInDown" style="font-family: 'Dancing Script', cursive; font-size: 13rem;">Mi Mary</h1>
         <h3 class="text-black">Студия красоты в Новомосковске</h3>
@@ -11,12 +11,12 @@
 </section>
 
 <!-- Раздел "О нас" -->
-<section id="about" >
+<section id="about" class="text-center py-5">
     <div class="container">
         <h2 class="text-center mb-4">О нас</h2>
         <div class="row">
             <div class="col-md-6">
-                <img src="{% static 'images/eyes_butterflies.jpg' %}" alt="Mi Mary" class="img-fluid rounded">
+                <img src="{% static 'images/eyes_butterflies2.jpg' %}" alt="Mi Mary" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
                 <h4>Добро пожаловать в салон красоты "Mi Mary"! Мы специализируемся на создании неповторимого образа для каждого клиента.</h4>
@@ -28,13 +28,13 @@
 </section>
 
 <!-- Раздел "Услуги" -->
-<section id="service_list">
+<section class="py-5" id="service_list">
 <div class="container mt-4">
     <h2 class="text-center mb-4">Наши услуги</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
-        <div class="col">
-            <div class="card h-100 shadow-sm">
+        <div class="col ">
+            <div class="border border-dark rounded-3">
                 {% if category.image %}
                 <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" style="height: 200px; object-fit: cover;">
                 {% else %}
@@ -43,7 +43,7 @@
                 </div>
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title text-center">{{ category.name }}</h5>
+                    <h5 class="card-title text-center fs-1">{{ category.name }}</h5>
                     {% if category.description %}
                     <p class="card-text">{{ category.description }}</p>
                     {% endif %}
@@ -62,7 +62,7 @@
 
 
 <!-- Раздел "Отзывы" -->
-<section id="reviews">
+<section class="py-5" id="reviews">
     <div class="container">
         <h2 class="text-center mb-4">Отзывы</h2>
         <div class="row">

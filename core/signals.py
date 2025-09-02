@@ -1,5 +1,6 @@
 from django.db.models.signals import post_save, m2m_changed
 from django.dispatch import receiver
+from django.contrib.auth.models import User
 from .models import Review, Order
 from .mistral import is_bad_review
 from .telegram_bot import send_telegram_message
@@ -20,30 +21,24 @@ def notify_telegram_on_order_create(sender, instance, action, **kwargs):
             list_services = [service.name for service in instance.services.all()]
             appointment_date = instance.appointment_date.strftime("%d.%m.%Y") if instance.appointment_date else "Не указана"
             tg_markdown_message = f"""
-
 ====== *Новый заказ!* ======
 **Имя:** {instance.client_name}
 **Телефон:** {instance.phone}
 **Дата записи:** {appointment_date}
 **Услуги:** {', '.join(list_services)}
 **Комментарий:** {instance.comment}
-
 **Подробнее:** http://127.0.0.1:8000/admin/core/order/{instance.id}/change/
-
 #заказ
-
 """
             asyncio.run(send_telegram_message(api_key, user_id, tg_markdown_message))
     except Exception as e:
         print(f"Ошибка отправки сообщения в Telegram: {e}")
-
 
 @receiver(post_save, sender=Review)
 def ai_validate_process_review(sender, instance, created, **kwargs):
     if created and not kwargs.get('raw', False):
         # Меняем статус "На модерации"
         instance.status = "ai_moderating"
-
         # Запускаем валидацию через AI - возвращает True или False
         try:
             is_bad = is_bad_review(instance.text)
@@ -51,9 +46,46 @@ def ai_validate_process_review(sender, instance, created, **kwargs):
                 instance.status = "ai_rejected"
             else:
                 instance.status = "ai_approved"
-
         except Exception as e:
             print(f"Ошибка при проверке отзыва: {e}")
-
         finally:
             instance.save()
+
+@receiver(post_save, sender=Review)
+def notify_telegram_on_review_create(sender, instance, created, **kwargs):
+    """
+    Обработчик сигнала post_save для модели Review.
+    Отправляет уведомление в Telegram о новом отзыве.
+    """
+    if created and not kwargs.get('raw', False):
+        try:
+            tg_markdown_message = f"""
+====== *Новый отзыв!* ======
+**Имя:** {instance.client_name}
+**Рейтинг:** {instance.rating}
+**Текст:** {instance.text}
+**Подробнее:** http://127.0.0.1:8000/admin/core/review/{instance.id}/change/
+#отзыв
+"""
+            asyncio.run(send_telegram_message(api_key, user_id, tg_markdown_message))
+        except Exception as e:
+            print(f"Ошибка отправки сообщения в Telegram: {e}")
+
+@receiver(post_save, sender=User)
+def notify_telegram_on_user_create(sender, instance, created, **kwargs):
+    """
+    Обработчик сигнала post_save для модели User.
+    Отправляет уведомление в Telegram о новом пользователе.
+    """
+    if created and not kwargs.get('raw', False):
+        try:
+            tg_markdown_message = f"""
+====== *Новый пользователь!* ======
+**Имя:** {instance.username}
+**Email:** {instance.email}
+**Подробнее:** http://127.0.0.1:8000/admin/auth/user/{instance.id}/change/
+#пользователь
+"""
+            asyncio.run(send_telegram_message(api_key, user_id, tg_markdown_message))
+        except Exception as e:
+            print(f"Ошибка отправки сообщения в Telegram: {e}")

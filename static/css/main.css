@@ -59,13 +59,13 @@
     border-bottom: 2px solid #000000;
 }
     .btn-custom {
-        background-color: #dc03f9; 
-        color: white;
+        background-color: #f294ff; 
+        color: rgb(0, 0, 0);
         border: none;
     }
     .btn-custom:hover {
-        background-color: #7a0083; /* Темнее при наведении */
-        color: white;
+        background-color: #de49ff; /* Темнее при наведении */
+        color: rgb(0, 0, 0);
     }
     .card {
         border: none;
