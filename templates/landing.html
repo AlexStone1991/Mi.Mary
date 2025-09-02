@@ -6,7 +6,7 @@
 <section class="hero-section text-center py-5" >
     <div class="container">
         <h1 class="display-4 text-black animate__animated animate__fadeInDown" style="font-family: 'Dancing Script', cursive; font-size: 13rem;">Mi Mary</h1>
-        <h2 class="lead text-black">Студия красоты в Новомосковске</h2>
+        <h3 class="text-black">Студия красоты в Новомосковске</h3>
     </div>
 </section>
 
@@ -19,36 +19,47 @@
                 <img src="{% static 'images/eyes_butterflies.jpg' %}" alt="Mi Mary" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
-                <p>Добро пожаловать в салон красоты "Mi Mary"! Мы специализируемся на создании неповторимого образа для каждого клиента.</p>
-                <p>Наши мастера используют только профессиональные средства и современные техники.</p>
-                <p>Вы всегда красивы, а мы поможем вам сиять ещё ярче!</p>
+                <h4>Добро пожаловать в салон красоты "Mi Mary"! Мы специализируемся на создании неповторимого образа для каждого клиента.</h4>
+                <h6>Наш Мастер используют только профессиональные средства и современные техники.</h6>
+                <h6>Вы всегда красивы, а мы поможем вам сиять ещё ярче!</h6>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Раздел "Услуги" -->
-<section id="services" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Наши услуги</h2>
-        <div class="row">
-            {% for service in popular_services %}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    {% if service.image %}
-                        <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}">
+<section id="service_list">
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Наши услуги</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for category in categories %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                {% if category.image %}
+                <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" style="height: 200px; object-fit: cover;">
+                {% else %}
+                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <i class="bi bi-scissors fs-1 text-muted"></i>
+                </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ category.name }}</h5>
+                    {% if category.description %}
+                    <p class="card-text">{{ category.description }}</p>
                     {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ service.name }}</h5>
-                        <p class="card-text">{{ service.description|truncatewords:10 }}</p>
-                        <p class="text-success">{{ service.price }} ₽</p>
-                    </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'category_services' category.id %}" class="btn btn-custom w-100">
+                        <i class="bi bi-arrow-right"></i> Подробнее
+                    </a>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</div>
 </section>
+
 
 <!-- Раздел "Отзывы" -->
 <section id="reviews">

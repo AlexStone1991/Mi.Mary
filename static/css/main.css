@@ -7,7 +7,7 @@
         transition: background-color 0.3s;
     }
     .nav-block:hover {
-        background-color: #f8f9fa;
+        background-color: #ffffff;
     }
     .nav-block-content {
         display: flex;
@@ -35,7 +35,7 @@
 }
 
 .nav-link:hover {
-    color: #ffd700 !important;
+    color: #ee00ff !important;
 }
 
 .btn-outline-light {
@@ -48,9 +48,6 @@
     color: black;
 }
 /* Эффект при наведении на пункты меню */
-.nav-link:hover {
-    color: #6c757d !important; /* Серый цвет при наведении */
-}
 
 /* Подчёркивание при наведении */
 .nav-link {
@@ -59,15 +56,15 @@
 }
 
 .nav-link:hover {
-    border-bottom: 2px solid #6c757d;
+    border-bottom: 2px solid #000000;
 }
     .btn-custom {
-        background-color: #8B4513; /* Цвет шоколадный */
+        background-color: #dc03f9; 
         color: white;
         border: none;
     }
     .btn-custom:hover {
-        background-color: #A0522D; /* Темнее при наведении */
+        background-color: #7a0083; /* Темнее при наведении */
         color: white;
     }
     .card {
@@ -78,8 +75,9 @@
         transform: translateY(-5px);
     }
     .card-footer {
-        background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+        background-color: rgb(255, 254, 254); /* Прозрачный фон */
     }
+
 
 
 

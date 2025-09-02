@@ -1,4 +1,4 @@
-from .models import Order, Service, Review
+from .models import Order, Service, Review, Category
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from core.context_processors import menu_items
@@ -9,7 +9,8 @@ from django.shortcuts import get_object_or_404
 from .forms import OrderForm, ReviewForm
 from django.utils.decorators import method_decorator
 from django.utils import timezone
-from datetime import datetime
+from datetime import datetime, time, timedelta
+
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 from django.views import View
 from django.urls import reverse_lazy, reverse
@@ -20,11 +21,43 @@ from django.views.generic import (
     TemplateView,
 )
 
+def get_min_appointment_time():
+    now = datetime.now()
+    # Округляем текущее время до ближайших 30 минут
+    rounded_minutes = (now.minute // 30) * 30
+    if now.minute % 30 >= 30:
+        rounded_minutes += 30
+    rounded_time = now.replace(minute=rounded_minutes, second=0, microsecond=0)
+    # Если округленное время меньше текущего, добавляем час
+    if rounded_time < now:
+        rounded_time += timedelta(hours=1)
+    return rounded_time.strftime('%Y-%m-%dT%H:%M')
+
+def get_max_appointment_time():
+    now = datetime.now()
+    # Устанавливаем максимальное время на 1000 дней вперед
+    max_appointment_time = now + timedelta(days=1000)
+    return max_appointment_time.strftime('%Y-%m-%dT%H:%M')
+
+class CategoryServicesView(TemplateView):
+    template_name = 'category_services.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category = get_object_or_404(Category, id=self.kwargs['category_id'])
+        context['category'] = category
+        context['services'] = category.services.all()
+        context['min_date'] = get_min_appointment_time()
+        context['max_date'] = get_max_appointment_time()
+        return context
+
+
 class LandingView(TemplateView):
     template_name = 'landing.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context["categories"] = Category.objects.all()
         show_all = self.request.GET.get('show_all', False)
 
         # Отзывы с пользователями (оптимизировано)
@@ -45,6 +78,35 @@ class LandingView(TemplateView):
 
 class ThanksViews(TemplateView):
     template_name = 'thanks.html'
+
+    def get_context_data(self, **kwargs):
+        """
+        Расширение get_context_data для возможности передать в шаблон {{ title }} и {{ message }}.
+
+        Они будут разные, в зависимости от куда пришел человек.
+        Со страницы order/create/ с псевдонимом order-create
+        Или со страницы review/create/ с псевдонимом review-create
+        """
+        context = super().get_context_data(**kwargs)
+
+        if kwargs["source"]:
+            source = kwargs["source"]
+            if source == "create_order":
+                context["title"] = "Спасибо за заказ!"
+                context["message"] = (
+                    "Ваш заказ принят. Скоро с вами свяжется наш менеджер для уточнения деталей."
+                )
+            elif source == "create_review":
+                context["title"] = "Спасибо за отзыв!"
+                context["message"] = (
+                    "Ваш отзыв принят и отправлен на модерацию. После проверки он появится на сайте."
+                )
+
+        else:
+            context["title"] = "Спасибо!"
+            context["message"] = "Спасибо за ваше обращение!"
+
+        return context
 
 @method_decorator(login_required, name="dispatch")
 class OrdersListView(ListView):
@@ -95,7 +157,7 @@ class ReviewCreateView(CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'create_review.html'
-    success_url = reverse_lazy('thanks')
+    success_url = reverse_lazy("thanks", kwargs={"source": "create_review"})
 
     def form_valid(self, form):
         messages.success(self.request, "Ваш отзыв отправлен на модерацию")
@@ -104,7 +166,7 @@ class ReviewCreateView(CreateView):
 class OrderCreateView(CreateView):
     model = Order
     form_class = OrderForm
-    success_url = reverse_lazy('thanks')
+    success_url = reverse_lazy("thanks", kwargs={"source": "create_order"})
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -124,4 +186,3 @@ class OrderCreateView(CreateView):
             "min_date": timezone.now().strftime('%Y-%m-%dT%H:%M')
         })
         return context
-

@@ -1,6 +1,10 @@
 # core/admin.py
 from django.contrib import admin
-from .models import Service, Order, Review
+from .models import Service, Order, Review, Category
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ["name"]
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">{{ category.name }}</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for service in services %}
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                {% if service.image %}
+                <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}" style="height: 200px; object-fit: cover;">
+                {% else %}
+                <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <i class="bi bi-scissors fs-1 text-muted"></i>
+                </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ service.name }}</h5>
+                    {% if service.description %}
+                    <p class="card-text">{{ service.description }}</p>
+                    {% endif %}
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-primary">{{ service.price }} руб.</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <button class="btn btn-custom w-100" data-bs-toggle="modal" data-bs-target="#orderModal" data-service-id="{{ service.id }}">
+                        <i class="bi bi-calendar-plus"></i> Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Модальное окно записи -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Запись на услуги</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+    <label for="id_appointment_date" class="form-label">Дата и время</label>
+    <input type="datetime-local" class="form-control" id="id_appointment_date" name="appointment_date"
+           min="{{ min_date }}" max="{{ max_date }}" step="1800" required>
+</div>
+
+
+
+
+                    <div class="mb-3">
+                        <label for="id_client_name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="id_client_name" name="client_name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_phone" class="form-label">Телефон</label>
+                        <input type="text" class="form-control" id="id_phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Выберите услуги</label>
+                        <div class="border p-3 rounded bg-light">
+                            {% for service in services %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="services" value="{{ service.id }}" id="service_{{ service.id }}">
+                                <label class="form-check-label" for="service_{{ service.id }}">
+                                    {{ service.name }} ({{ service.price }} руб.)
+                                </label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_comment" class="form-label">Комментарий</label>
+                        <textarea class="form-control" id="id_comment" name="comment" rows="3" placeholder="Введите комментарий"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-check-circle"></i> Подтвердить запись
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const orderModal = document.getElementById('orderModal');
+    const orderForm = document.getElementById('orderForm');
+
+    // Обработчик открытия модального окна
+    orderModal.addEventListener('show.bs.modal', function(event) {
+        const button = event.relatedTarget;
+        const serviceId = button.getAttribute('data-service-id');
+
+        // Отмечаем чекбокс выбранной услуги
+        const checkbox = document.querySelector(`input[type="checkbox"][value="${serviceId}"]`);
+        if (checkbox) {
+            checkbox.checked = true;
+        }
+    });
+
+    // Обработчик отправки формы
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(orderForm);
+
+        fetch("{% url 'create_order' %}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': orderForm.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = "{% url 'thanks' 'create_order' %}";
+            } else {
+                alert("Произошла ошибка. Проверьте данные и попробуйте снова.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Произошла ошибка. Попробуйте позже.");
+        });
+    });
+});
+</script>
+{% endblock %}

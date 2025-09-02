@@ -14,7 +14,7 @@ def menu_items(request):
         },
         {
             "name": "Услуги",
-            "url": reverse("landing") + "#services",
+            "url": reverse("landing") + "#services_list",
             "icon_class": "bi-scissors",
         },
         {

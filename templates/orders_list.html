@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container mt-4">
-    <div class="card mb-4">
+<div>
+    <div>
         <div class="card-body">
             <form method="get" class="row g-3">
                 <div class="col-md-6">
@@ -30,13 +30,13 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Найти</button>
+                    <button type="submit" class="btn btn-outline-dark">Найти</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<div class="container mt-4">
+<div>
     {% if user.is_staff %}
         <h1 class="text-center mb-4">Список заявок</h1>
         <div class="flex-container">

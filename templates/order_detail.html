@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container mt-5">
-    <div class="card shadow">
-        <div class="card-header bg-warning">
+<div>
+    <div>
+        <div>
             <h2>Детали заказа #{{ order.id }}</h2>
         </div>
-        <div class="card-body">
+        <div>
             <!-- Основная информация о заказе -->
-            <div class="row mb-4">
-                <div class="col-md-6">
+            <div>
+                <div>
                     <p><strong>Клиент:</strong> {{ order.client_name }}</p>
                     <p><strong>Телефон:</strong> {{ order.phone }}</p>
                 </div>
-                <div class="col-md-6">
+                <div>
                     <p><strong>Дата записи:</strong> {{ order.appointment_date|date:"d.m.Y H:i" }}</p>
                     <p><strong>Статус:</strong> 
                         <span class="badge bg-{{ order.status }}">
@@ -24,8 +24,8 @@
             </div>
 
             <!-- Список услуг -->
-            <h4 class="mb-3">Выбранные услуги</h4>
-            <ul class="list-group mb-4">
+            <h4 >Выбранные услуги</h4>
+            <ul >
                 {% for service in order.services.all %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <div>
@@ -35,10 +35,10 @@
                 </li>
                 {% endfor %}
                 
-                <div class="alert alert-warning">
+                <div>
                 <h5 class="mb-0">Итого к оплате: {{ order.total_price|default:0 }}₽</h5>
             </div>
-                <li class="list-group-item list-group-item-warning d-flex justify-content-between">
+                <li >
                     <strong>Итого:</strong>
                     <strong>
                         {% with total=order.services.all %}
@@ -50,14 +50,14 @@
 
             <!-- Дополнительная информация -->
             {% if order.comment %}
-            <div class="alert alert-light">
+            <div >
                 <h5>Комментарий:</h5>
                 <p>{{ order.comment }}</p>
             </div>
             {% endif %}
 
             <a href="{% url 'orders' %}" class="btn btn-outline-secondary">
-                <i class="bi bi-arrow-left"></i> Назад к списку заявок
+                <i ></i> Назад к списку заявок
             </a>
         </div>
     </div>
