@@ -10,8 +10,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4 text-center">
-                            {% if user_obj.avatar %}
-                                <img src="{{ user_obj.avatar.url }}" class="img-fluid rounded-circle" alt="Аватар">
+                            {% if user_profile.avatar %}
+                                <img src="{{ user_profile.avatar.url }}" class="img-fluid rounded" alt="Аватар">
                             {% else %}
                                 <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle" alt="Аватар">
                             {% endif %}

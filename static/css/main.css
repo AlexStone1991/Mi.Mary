@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .nav-block {
         margin: 0 5px;
         padding: 8px 12px;
@@ -67,17 +71,53 @@
         background-color: #de49ff; /* Темнее при наведении */
         color: rgb(0, 0, 0);
     }
-    .card {
+    /* .card {
         border: none;
         transition: transform 0.3s;
     }
     .card:hover {
         transform: translateY(-5px);
-    }
-    .card-footer {
-        background-color: rgba(255, 255, 255, 0); /* Прозрачный фон */
-    }
+    }*/
 
 
+/* Стили для карточек услуг */
+#service_list .card {
+    background-color: transparent !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+}
 
+#service_list .card-body {
+    background-color: transparent !important;
+}
 
+#service_list .card-img-top {
+    background-color: transparent !important;
+}
+
+/* Эффект наведения для карточек услуг */
+#service_list .card {
+    transition: transform 0.3s;
+}
+
+#service_list .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Стили для карточек отзывов */
+#reviews .card {
+    background-color: rgba(255, 255, 255, 0.459) !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+}
+
+#reviews .card-body {
+    background-color: transparent !important;
+}
+
+/* Убираем белый фон у изображения-заглушки */
+#service_list .card-img-top.bg-light {
+    background-color: transparent !important;
+}
+#category .card {
+    background-color: transparent !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+}
