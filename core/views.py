@@ -61,7 +61,7 @@ class LandingView(TemplateView):
         show_all = self.request.GET.get('show_all', False)
 
         # Отзывы с пользователями (оптимизировано)
-        all_reviews = Review.objects.filter(status="published")
+        all_reviews = Review.objects.filter(is_published=True)
         total_reviews = all_reviews.count()
         reviews = all_reviews[:6] if not show_all else all_reviews
 
