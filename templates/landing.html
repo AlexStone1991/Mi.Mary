@@ -33,8 +33,8 @@
     <h2 class="text-center mb-4">Наши услуги</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
-        <div class="col ">
-            <div class="border border-dark rounded-3">
+        <div class="col">
+            <div class="border border-dark rounded-3 card">
                 {% if category.image %}
                 <img src="{{ category.image.url }}" class="card-img-top" alt="{{ category.name }}" style="height: 200px; object-fit: cover;">
                 {% else %}
