@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color: #ff00fb55;
 }
 
 .nav-block {
@@ -21,15 +22,17 @@ html {
     .hero-section {
         min-height: 500px;
     }
-    .card {
-        transition: transform 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }
+
 .navbar {
     background: rgba(255, 0, 0, 0.053) !important;
     backdrop-filter: blur(1px);
+}
+.card {
+    background: #fbff00 !important;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .nav-link {
@@ -110,7 +113,7 @@ html {
     background-color: transparent !important;
 }
 #category .card {
-    background-color: transparent !important;
+    background-color: rgba(255, 255, 255, 0.459) !important;
     border: 1px solid rgb(0, 0, 0) !important;
 }
 /* Стили для карточек заявок */
