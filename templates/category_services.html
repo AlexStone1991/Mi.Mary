@@ -3,6 +3,9 @@
 {% block content %}
 <section id="category">
 <div class="container mt-4">
+    <div class="card-img-top d-flex justify-content-end">
+    <a href="{% url 'landing' %}" class="btn btn-outline-dark ">Назад на главную</a>
+    </div>
     <h2 class="text-center mb-4">{{ category.name }}</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for service in services %}
@@ -48,14 +51,9 @@
                 <form id="orderForm" method="post">
                     {% csrf_token %}
                     <div class="mb-3">
-    <label for="id_appointment_date" class="form-label">Дата и время</label>
-    <input type="datetime-local" class="form-control" id="id_appointment_date" name="appointment_date"
-           min="{{ min_date }}" max="{{ max_date }}" step="1800" required>
-</div>
-
-
-
-
+                        <label for="id_appointment_date" class="form-label">Дата и время</label>
+                        <input type="datetime-local" class="form-control" id="id_appointment_date" name="appointment_date" min="{{ min_date }}" max="{{ max_date }}" step="1800" required>
+                    </div>
                     <div class="mb-3">
                         <label for="id_client_name" class="form-label">Ваше имя</label>
                         <input type="text" class="form-control" id="id_client_name" name="client_name" placeholder="Введите ваше имя" required>

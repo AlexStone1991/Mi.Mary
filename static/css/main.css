@@ -71,14 +71,6 @@ html {
         background-color: #de49ff; /* Темнее при наведении */
         color: rgb(0, 0, 0);
     }
-    /* .card {
-        border: none;
-        transition: transform 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-5px);
-    }*/
-
 
 /* Стили для карточек услуг */
 #service_list .card {
@@ -120,4 +112,58 @@ html {
 #category .card {
     background-color: transparent !important;
     border: 1px solid rgb(0, 0, 0) !important;
+}
+/* Стили для карточек заявок */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.flex-card {
+    background: #ffffff76; 
+    border: 3px solid #000000; 
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.flex-card:hover {
+    transform: translateY(-5px);
+}
+.div-container {
+    background: #ffffff76; 
+    border: 3px solid #000000; 
+    border-radius: 15px;
+    padding: 20px;
+    
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+/* Цвета статусов */
+.bg-new {
+    background-color: #fbff00 !important; 
+    color: rgb(0, 0, 0);
+}
+.bg-confirmed {
+    background-color: #2196F3 !important; 
+    color: rgb(0, 0, 0);
+}
+.bg-completed {
+    background-color: #4CAF50 !important; 
+    color: rgb(0, 0, 0);
+}
+.bg-canceled {
+    background-color: #F44336 !important; 
+    color: rgb(0, 0, 0);
+}
+
+.prof-container {
+    background: #ffffff43; 
+    border: 3px solid #000000; 
+    border-radius: 15px;
+    padding: 20px;
 }

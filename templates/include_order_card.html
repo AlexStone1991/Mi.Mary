@@ -20,7 +20,7 @@
         <p><i class="bi bi-scissors"></i> Услуги ({{ order.services.count }}):</p>
         <div class="services">
             {% for service in order.services.all %}
-                <span class="badge bg-secondary">
+                <span class="badge bg-dark">
                     {{ service.name }} ({{ service.price }}₽)
                 </span>
             {% empty %}

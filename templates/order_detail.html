@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div>
-    <div>
+<div >
+    <div class="div-container">
         <div>
             <h2>Детали заказа #{{ order.id }}</h2>
         </div>
@@ -24,20 +24,19 @@
             </div>
 
             <!-- Список услуг -->
-            <h4 >Выбранные услуги</h4>
+            <h4 >Выбранные услуги:</h4>
             <ul >
-                {% for service in order.services.all %}
+                {% for service in order.services.all%}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <div>
                         <h6 class="mb-1">{{ service.name }}</h6>
                     </div>
-                    <span class="badge bg-primary rounded-pill">{{ service.price }}₽</span>
+                    <span class="badge bg-dark rounded-pill">{{ service.price }}₽</span>
                 </li>
                 {% endfor %}
                 
-                <div>
-                <h5 class="mb-0">Итого к оплате: {{ order.total_price|default:0 }}₽</h5>
-            </div>
+                
+                
                 <li >
                     <strong>Итого:</strong>
                     <strong>
@@ -52,30 +51,13 @@
             {% if order.comment %}
             <div >
                 <h5>Комментарий:</h5>
-                <p>{{ order.comment }}</p>
+                <strong><p style="color: #ff0000ff;">{{ order.comment }}</p></strong>
             </div>
             {% endif %}
-
-            <a href="{% url 'orders' %}" class="btn btn-outline-secondary">
+            
+            <a href="{% url 'orders' %}" class="btn btn-outline-dark">
                 <i ></i> Назад к списку заявок
             </a>
         </div>
     </div>
-
-<!-- Прогресс-бар статуса заказа -->
-<div class="progress mb-4" style="height: 20px;">
-  <div class="progress-bar 
-    {% if order.status == 'new' %}bg-warning
-    {% elif order.status == 'confirmed' %}bg-info
-    {% elif order.status == 'completed' %}bg-success
-    {% else %}bg-danger{% endif %}" 
-    style="width: 
-    {% if order.status == 'new' %}25%
-    {% elif order.status == 'confirmed' %}50%
-    {% elif order.status == 'completed' %}100%
-    {% else %}100%{% endif %}">
-    {{ order.get_status_display }}
-  </div>
-</div>
-</div>
 {% endblock %}
