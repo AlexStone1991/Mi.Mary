@@ -28,7 +28,7 @@ html {
     backdrop-filter: blur(1px);
 }
 .card {
-    background: #fbff00 !important;
+    background: #ffffff65 !important;
     transition: transform 0.3s;
 }
 .card:hover {

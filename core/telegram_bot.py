@@ -1,39 +1,42 @@
 import logging
+import asyncio
 import telegram
-# import os
-# import asyncio
-# from dotenv import load_dotenv
+from typing import Tuple, List
 
-# load_dotenv()
+# Настройка логгера (в основном файле твоего приложения)
+logger = logging.getLogger(__name__)
 
-
-# Настройка логирования
-logging.basicConfig(level=logging.DEBUG)
-
-async def send_telegram_message(api_key: str, chat_id: str, message: str, parse_mode: str = None):
+async def send_messages(api_key: str, message: str, *user_ids: str, parse_mode: str = None) -> Tuple[List[str], List[str]]:
     """
-    Отправляет сообщение в Telegram чат.
+    Асинхронно отправляет сообщение пользователям Telegram.
+
+    ID пользователей передаются как отдельные позиционные аргументы (*args) после сообщения.
+
+    Args:
+        api_key (str): Токен Telegram бота.
+        message (str): Текст сообщения.
+        *user_ids (str): Один или несколько ID чатов для отправки.
+        parse_mode (str, optional): Режим разметки ('MarkdownV2' или 'HTML').
+
+    Returns:
+        Кортеж из двух списков: (список ID, кому успешно отправлено, список ID, кому не удалось отправить).
     """
-    try:
-        bot = telegram.Bot(token=api_key)
-        await bot.send_message(chat_id=chat_id, text=message, parse_mode=parse_mode)
-        logging.info(f"Сообщение отправлено в чат {chat_id}")
-    except Exception as e:
-        logging.error(f"Ошибка отправки сообщения в чат {chat_id}: {e}")
-        raise
+    bot = telegram.Bot(token=api_key)
 
-# async def send_telegram_message(token, chat_id, message, parse_mode="Markdown"):
-#     try:
-#         bot = telegram.Bot(token=token)
-#         await bot.send_message(chat_id=chat_id, text=message, parse_mode=parse_mode)
-#         logging.info(f'Сообщение "{message}" отправлено в чат {chat_id}')
-#     except Exception as e:
-#         logging.error(f"Ошибка отправки сообщения в чат {chat_id}: {e}")
-#         raise
+    async def _send_single_message(chat_id: str):
+        try:
+            await bot.send_message(chat_id=chat_id, text=message, parse_mode=parse_mode)
+            logger.info(f"Сообщение успешно отправлено в чат {chat_id}")
+            return "success", chat_id
+        except Exception as e:
+            logger.error(f"Ошибка отправки сообщения в чат {chat_id}: {e}")
+            return "failure", chat_id
 
-# if __name__ == "__main__":
-#     load_dotenv()
-#     TELEGRAM_BOT_API_KEY = os.getenv("TELEGRAM_BOT_API_KEY")
-#     TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
-#     message = "Текстовое сообщение"
-#     asyncio.run(send_telegram_message(TELEGRAM_BOT_API_KEY, TELEGRAM_USER_ID, message))
+    # user_ids будет кортежем ('id1', 'id2', ...), с которым gather отлично работает
+    tasks = [_send_single_message(user_id) for user_id in user_ids]
+    results = await asyncio.gather(*tasks)
+
+    successful_ids = [chat_id for status, chat_id in results if status == "success"]
+    failed_ids = [chat_id for status, chat_id in results if status == "failure"]
+    
+    return successful_ids, failed_ids

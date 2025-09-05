@@ -8,7 +8,7 @@ import logging
 # Импорты из core приложения
 from core.models import Review, Order
 from core.mistral import is_bad_review
-from core.telegram_bot import send_telegram_message
+from core.telegram_bot import send_messages
 
 # Импортируем кастомную модель пользователя
 from users.models import CustomUser
@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 
 api_key = settings.TELEGRAM_BOT_API_KEY
 user_id = settings.TELEGRAM_USER_ID
+user_id_2 = settings.TELEGRAM_USER_ID_2
 
 @receiver(m2m_changed, sender=Order.services.through)
 def notify_telegram_on_order_create(sender, instance, action, **kwargs):
@@ -45,7 +46,7 @@ def send_order_notification(instance):
 Подробнее: http://127.0.0.1:8000/admin/core/order/{instance.id}/change/
 #заказ
 """
-        asyncio.run(send_telegram_message(api_key, user_id, tg_markdown_message))
+        asyncio.run(send_messages(api_key, tg_markdown_message, user_id, user_id_2))
         logger.info(f"✅ Уведомление о заказе {instance.id} отправлено в Telegram")
     except Exception as e:
         logger.error(f"❌ Ошибка отправки сообщения в Telegram: {e}")
@@ -116,7 +117,7 @@ def send_review_notification(instance):
 Подробнее: http://127.0.0.1:8000/admin/core/review/{instance.id}/change/
 #отзыв #{instance.status}
 """
-        asyncio.run(send_telegram_message(api_key, user_id, tg_plain_message, None))
+        asyncio.run(send_messages(api_key, tg_plain_message, user_id, user_id_2, None))
         logger.info(f"📨 Уведомление об отзыве {instance.id} отправлено в Telegram")
     except Exception as e:
         logger.error(f"❌ Ошибка отправки сообщения в Telegram: {e}")
@@ -143,7 +144,7 @@ Email: {instance.email if instance.email else 'Не указан'}
 Подробнее: http://127.0.0.1:8000/admin/users/customuser/{instance.id}/change/
 #пользователь
 """
-        asyncio.run(send_telegram_message(api_key, user_id, tg_markdown_message))
+        asyncio.run(send_messages(tg_markdown_message, api_key, user_id, user_id_2))
         logger.info(f"✅ Уведомление о пользователе {instance.id} отправлено в Telegram")
     except Exception as e:
         logger.error(f"❌ Ошибка отправки сообщения в Telegram: {e}")

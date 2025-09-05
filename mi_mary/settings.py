@@ -135,6 +135,7 @@ MISTRAL_MODERATIONS_GRADES = {
 
 TELEGRAM_BOT_API_KEY = os.getenv("TELEGRAM_BOT_API_KEY")
 TELEGRAM_USER_ID = os.getenv("TELEGRAM_USER_ID")
+TELEGRAM_USER_ID_2 = os.getenv("TELEGRAM_USER_ID_2")
 
 LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("landing")

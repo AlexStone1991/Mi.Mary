@@ -170,6 +170,7 @@ class OrderCreateView(CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
+        messages.success(self.request, "Ваша заявка принята и отправлена на модерацию")
         if self.request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             return JsonResponse({'success': True})
         return response
