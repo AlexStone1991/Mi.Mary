@@ -23,7 +23,7 @@
                             </div>
                         {% endfor %}
                         
-                        <button type="submit" class="btn btn-primary w-100">{{ operation_type  }}</button>
+                        <button type="submit" class="btn btn-dark w-100">{{ operation_type  }}</button>
                         {% if is_auth_form %}
                         <a href="{% url 'password_reset' %}" class="btn btn-link w-100">Забыли пароль?</a>
                         {% endif %}

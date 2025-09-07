@@ -144,7 +144,7 @@ Email: {instance.email if instance.email else 'Не указан'}
 Подробнее: http://127.0.0.1:8000/admin/users/customuser/{instance.id}/change/
 #пользователь
 """
-        asyncio.run(send_messages(tg_markdown_message, api_key, user_id, user_id_2))
+        asyncio.run(send_messages(api_key, tg_markdown_message, user_id, user_id_2))
         logger.info(f"✅ Уведомление о пользователе {instance.id} отправлено в Telegram")
     except Exception as e:
         logger.error(f"❌ Ошибка отправки сообщения в Telegram: {e}")
