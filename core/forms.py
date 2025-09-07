@@ -1,8 +1,6 @@
 from django import forms
 from .models import Order, Service, Review
 from django.forms import DateTimeInput
-
-# forms.py
 from django import forms
 
 class BaseBootstrapForm(forms.ModelForm):
@@ -17,6 +15,14 @@ class BaseBootstrapForm(forms.ModelForm):
                 field.widget.attrs.update({"type": "date"})
             elif isinstance(field, forms.FileField):
                 field.widget.attrs.update({"class": "form-control-file"})
+
+class OrderStatusForms(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ["status"]
+        labels = {
+            "status": "Статус заказа"
+        }
 
 
 class ReviewForm(BaseBootstrapForm):

@@ -37,7 +37,7 @@ def send_order_notification(instance):
         list_services = [service.name for service in instance.services.all()]
         appointment_date = instance.appointment_date.strftime("%d.%m.%Y") if instance.appointment_date else "Не указана"
         tg_markdown_message = f"""
-====== *Новый заказ!* ======
+======Новый заказ!======
 Имя: {instance.client_name}
 Телефон: {instance.phone}
 Дата записи: {appointment_date}
@@ -108,7 +108,7 @@ def send_review_notification(instance):
         publication_status = "ОПУБЛИКОВАН" if instance.is_published else "НЕ ОПУБЛИКОВАН"
         
         tg_plain_message = f"""
-====== НОВЫЙ ОТЗЫВ! {status_emoji} ======
+=== НОВЫЙ ОТЗЫВ! {status_emoji} ===
 Имя: {instance.client_name}
 Рейтинг: {instance.rating} ⭐
 Статус: {instance.get_status_display()}
@@ -137,7 +137,7 @@ def send_user_notification(instance):
     """Функция для отправки уведомления о пользователе"""
     try:
         tg_markdown_message = f"""
-====== Новый пользователь! ======
+=== Новый пользователь! ===
 Имя пользователя: {instance.username}
 Email: {instance.email if instance.email else 'Не указан'}
 Дата регистрации: {instance.date_joined.strftime("%d.%m.%Y %H:%M")}

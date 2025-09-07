@@ -24,13 +24,17 @@
 <p class="mb-0"><strong>Телефон:</strong> {{ order.phone }}</p>
 </div>
 <div class="col-md-6">
-<p><strong>Дата записи:</strong> {{ order.appointment_date|date:"d.m.Y H:i" }}</p>
-<p class="mb-0"><strong>Статус:</strong>
-<span class="badge bg-{{ order.status}}">
-                                    {{ order.get_status_display }}
-</span>
-</p>
+    <p><strong>Дата записи:</strong> {{ order.appointment_date|date:"d.m.Y H:i" }}</p>
+    <p class="mb-0"><strong>Статус:</strong>
+        <span class="badge bg-{{ order.status }}">
+            {{ order.get_status_display }}
+        </span>
+        {% if user.is_staff %}
+            <a href="{% url 'order_status_update' order.id %}" class="btn btn-sm btn-outline-primary ms-2">Редактировать статус</a>
+        {% endif %}
+    </p>
 </div>
+
 </div>
 </div>
 </div>

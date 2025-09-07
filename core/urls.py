@@ -12,7 +12,8 @@ from core.views import (
     OrderCreateView,
     ReviewCreateView,
     ServicesListView,
-    CategoryServicesView
+    CategoryServicesView,
+    OrderStatusUpdateView
 )
 
 urlpatterns = [
@@ -22,6 +23,7 @@ urlpatterns = [
     path('orders/<int:pk>/', OrderDetailView.as_view(), name='order_detail'),
     path("services_list/", ServicesListView.as_view(), name="service_list"),
     path('order/create/', OrderCreateView.as_view(), name='create_order'),
+    path('order/<int:pk>/status/', OrderStatusUpdateView.as_view(), name='order_status_update'),
     path('review/create/', ReviewCreateView.as_view(), name='create_review'),
     path('category/<int:category_id>/', CategoryServicesView.as_view(), name='category_services'),
 ]

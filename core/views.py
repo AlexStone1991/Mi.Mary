@@ -6,11 +6,11 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 from django.db.models import Q, Count, Sum, Prefetch
 from django.shortcuts import get_object_or_404
-from .forms import OrderForm, ReviewForm
+from .forms import OrderForm, ReviewForm, OrderStatusForms
 from django.utils.decorators import method_decorator
 from django.utils import timezone
 from datetime import datetime, time, timedelta
-
+from django.views.generic import UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 from django.views import View
 from django.urls import reverse_lazy, reverse
@@ -20,6 +20,19 @@ from django.views.generic import (
     CreateView,
     TemplateView,
 )
+class OrderStatusUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Order
+    form_class = OrderStatusForms
+    template_name = 'order_status_update.html'  # Убедитесь, что имя шаблона указано правильно
+    success_url = reverse_lazy('order_detail')
+
+    def test_func(self):
+        return self.request.user.is_staff
+
+    def get_success_url(self):
+        return reverse_lazy('order_detail', kwargs={'pk': self.object.pk})
+
+
 
 def get_min_appointment_time():
     now = datetime.now()
