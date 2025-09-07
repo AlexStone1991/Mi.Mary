@@ -1,7 +1,7 @@
 <div class="card h-100 shadow-sm">
 <div class="card-header bg-white d-flex justify-content-between align-items-center">
 <h5 class="mb-0">Заявка #{{ order.id }}</h5>
-<span class="badge bg-{{ order.status_color|default:'secondary' }}">
+<span class="badge bg-{{ order.status }}">
             {{ order.get_status_display }}
 </span>
 </div>
@@ -26,8 +26,8 @@
  
         {% if order.comment %}
 <div class="mt-auto pt-3 border-top">
-<p class="fst-italic text-muted mb-0">
-<i class="bi bi-chat-left-text me-1"></i>
+<p style="color: #fe0000ff;" class="fst-italic mb-0">
+<i style="color: red" class="bi bi-chat-left-text me-1"></i>
                 "{{ order.comment|truncatewords:15 }}"
 </p>
 </div>

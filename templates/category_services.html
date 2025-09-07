@@ -11,6 +11,13 @@
         {% for service in services %}
         <div class="col">
             <div class="border border-dark card">
+                {% if service.image and service.image.url %}
+                    <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}" style="height: 300px; object-fit: cover;">
+                {% else %}
+                    <div class="card-img-top d-flex align-items-center justify-content-center bg-secondary-subtle" style="height: 300px;">
+                        <i class="bi bi-scissors text-muted" style="font-size: 5rem;"></i>
+                    </div>
+                {% endif %}
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ service.name }}</h5>
                     {% if service.description %}
