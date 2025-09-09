@@ -47,7 +47,7 @@
     </div>
 </section>
 
-<section id="services-preview" class="py-5 bg-light">
+<section id="services-preview" class="py-5">
     <div class="container">
         <h3 class="text-center mb-4 animate__animated animate__fadeInUp">Наши ключевые услуги</h3>
         <div class="row text-center">
@@ -100,7 +100,7 @@
                 <div class="card h-100 shadow-sm border-0 portfolio-card">
                     <img src="{% static 'images/work2.jpg' %}" class="card-img-top" alt="Летний маникюр" style="height: 350px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
-                        <h6 class="card-title">Летняя свежесть</h6>
+                        <h6 class="card-title">Взгляд ангела</h6>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 <div class="card h-100 shadow-sm border-0 portfolio-card">
                     <img src="{% static 'images/work3.jpg' %}" class="card-img-top" alt="Наращивание ресниц" style="height: 350px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
-                        <h6 class="card-title">Взгляд ангела</h6>
+                        <h6 class="card-title">Лисий взгляд</h6>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                 <div class="card h-100 shadow-sm border-0 portfolio-card">
                     <img src="{% static 'images/work5.jpg' %}" class="card-img-top" alt="Мужской маникюр" style="height: 350px; width: 100%; object-fit: cover; object-position: center 70%;">
                     <div class="card-body text-center">
-                        <h6 class="card-title">Мужской уход</h6>
+                        <h6 class="card-title">Лунный Френч с золотом</h6>
                     </div>
                 </div>
             </div>
@@ -152,13 +152,16 @@
 
 <style>
 /* Анимации при наведении */
+#serv
+
 .service-item {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 15px;
 }
 .service-item:hover {
     transform: translateY(-10px);
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid rgb(0, 0, 0) !important;
+    background: linear-gradient(135deg, #f8f9fa24 0%, #e9ecef23 100%);
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
