@@ -1,4 +1,4 @@
-# add_timeslots.py
+# add_timeslots.py Скрипт для окошек!
 import os
 import django
 from datetime import datetime, timedelta

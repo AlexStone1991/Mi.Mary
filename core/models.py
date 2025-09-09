@@ -3,11 +3,15 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class TimeSlot(models.Model):
-    date_time = models.DateTimeField(unique=True)
-    is_booked = models.BooleanField(default=False)
+    date_time = models.DateTimeField(unique=True, verbose_name="Дата и время")
+    is_booked = models.BooleanField(default=False, verbose_name="Занято")
 
     def __str__(self):
         return f"{self.date_time.strftime('%d.%m.%Y - %H:%M')}"
+    
+    class Meta:
+        verbose_name = "Свободные окошки"
+        verbose_name_plural = "Свободные окошки"
 
 
 class Category(models.Model):

@@ -90,7 +90,7 @@ html {
     background-color: transparent !important;
 }
 
-/* Эффект наведения для карточек услуг */
+/* Эффект наведения для карточек услуг
 #service_list .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -98,7 +98,7 @@ html {
 #service_list .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /* Стили для карточек отзывов */
 #reviews .card {
@@ -184,7 +184,38 @@ html {
     border-radius: 15px;
 }
 
+/* Простые hover-эффекты */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15) !important;
+}
 
+.slot-card {
+    transition: all 0.3s ease;
+}
+.slot-card:hover {
+    background-color: #f8f9fa !important;
+    transform: translateX(5px);
+}
+
+.review-card {
+    transition: all 0.3s ease;
+}
+.review-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Анимация для кнопок */
+.btn-dark {
+    transition: all 0.3s ease;
+}
+.btn-dark:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
 
 
