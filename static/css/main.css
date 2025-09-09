@@ -29,10 +29,11 @@ html {
 }
 .card {
     background: #ffffff65 !important;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .nav-link {
@@ -91,11 +92,12 @@ html {
 
 /* Эффект наведения для карточек услуг */
 #service_list .card {
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #service_list .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Стили для карточек отзывов */
@@ -182,30 +184,7 @@ html {
     border-radius: 15px;
 }
 
-#portfolio .card {
-    background-color: rgba(255, 255, 255, 0.459) !important;
-    border: 1px solid rgb(0, 0, 0) !important;
-    transition: transform 0.3s;
-}
-#portfolio img {
-    max-width: 100%;
-}
 
-#portfolio {
-    background-color: rgba(255, 255, 255, 0.459) !important;
-    border: 1px solid rgb(0, 0, 0) !important;
-    transition: transform 0.3s;
-}
-
-#portfolio .card:hover {
-    transform: translateY(-5px);
-}
-
-#free-slots .list-group-item {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid rgb(0, 0, 0);
-}
 
 
 
