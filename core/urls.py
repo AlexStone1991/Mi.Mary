@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .views import book_slot, get_category_services
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.conf.urls.static import static
@@ -28,4 +29,6 @@ urlpatterns = [
     path('order/<int:pk>/status/', OrderStatusUpdateView.as_view(), name='order_status_update'),
     path('review/create/', ReviewCreateView.as_view(), name='create_review'),
     path('category/<int:category_id>/', CategoryServicesView.as_view(), name='category_services'),
+    path('api/book-slot/<int:slot_id>/', book_slot, name='book_slot'),
+    path('api/category-services/<int:category_id>/', get_category_services, name='get_category_services'),
 ]

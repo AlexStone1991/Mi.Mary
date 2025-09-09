@@ -1,6 +1,6 @@
 # core/admin.py
 from django.contrib import admin
-from .models import Service, Order, Review, Category
+from .models import Service, Order, Review, Category, TimeSlot
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -27,3 +27,10 @@ class ReviewAdmin(admin.ModelAdmin):
     def publish_reviews(self, request, queryset):
         queryset.update(status="published")
     publish_reviews.short_description = "Опубликовать выбранные отзывы"
+
+@admin.register(TimeSlot)
+class TimeSlotAdmin(admin.ModelAdmin):
+    list_display = ["date_time", "is_booked"]
+    list_filter = ["is_booked"]
+    list_editable = ["is_booked"]
+    ordering = ["date_time"]

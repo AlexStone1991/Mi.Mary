@@ -1,6 +1,15 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+
+class TimeSlot(models.Model):
+    date_time = models.DateTimeField(unique=True)
+    is_booked = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.date_time.strftime('%d.%m.%Y - %H:%M')}"
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Название категории")
     image = models.ImageField(upload_to="categories/", blank=True, verbose_name="Изображение")

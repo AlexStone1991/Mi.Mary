@@ -24,11 +24,14 @@
                     <a class="nav-link" href="{% url 'landing' %}#reviews" style="color: black !important; font-size: 1.2rem; font-weight: 500;">Отзывы</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="{% url 'create_review' %}" style="color: black !important; font-size: 1.2rem; font-weight: 500;">Оставить отзыв</a>
+                    <a class="nav-link" href="{% url 'landing' %}#free-slots" style="color: black !important; font-size: 1.2rem; font-weight: 500;">Свободные окошки</a>
                 </li>
                 {% if user.is_staff %}
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="{% url 'orders' %}" style="color: black !important;">Заявки</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="{% url 'create_review' %}" style="color: black !important; font-size: 1.2rem; font-weight: 500;">Оставить отзыв</a>
                 </li>
                 {% endif %}
             </ul>

@@ -1,4 +1,4 @@
-from .models import Order, Service, Review, Category
+from .models import Order, Service, Review, Category, TimeSlot
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from core.context_processors import menu_items
@@ -11,6 +11,8 @@ from django.utils.decorators import method_decorator
 from django.utils import timezone
 from datetime import datetime, time, timedelta
 from django.views.generic import UpdateView
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 from django.views import View
 from django.urls import reverse_lazy, reverse
@@ -20,6 +22,23 @@ from django.views.generic import (
     CreateView,
     TemplateView,
 )
+
+
+def get_category_services(request, category_id):
+    category = get_object_or_404(Category, id=category_id)
+    services = category.services.all().values('id', 'name', 'price')
+    return JsonResponse({'services': list(services)})
+
+
+# представление для обновления статуса слота после бронирования
+@csrf_exempt
+@require_POST
+def book_slot(request, slot_id):
+    slot = TimeSlot.objects.get(id=slot_id)
+    slot.is_booked = True
+    slot.save()
+    return JsonResponse({'success': True})
+
 
 class AboutView(TemplateView):
     template_name = "about.html"
@@ -75,7 +94,10 @@ class LandingView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        free_slots = TimeSlot.objects.filter(is_booked=False).order_by('date_time')
+        context['free_slots'] = free_slots
         context["categories"] = Category.objects.all()
+        context['services'] = Service.objects.all()
         show_all = self.request.GET.get('show_all', False)
 
         # Отзывы с пользователями (оптимизировано)
