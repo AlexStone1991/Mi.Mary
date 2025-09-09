@@ -64,7 +64,7 @@ class OrderForm(BaseBootstrapForm):
 
             "comment": forms.Textarea(attrs={
                 'class': 'form-control',
-                'placeholder': 'Комментарий к заказу'
+                'placeholder': 'Ваши пожелания)'
             }),
             'services': forms.CheckboxSelectMultiple(
                 attrs={'class': 'form-check-input'}

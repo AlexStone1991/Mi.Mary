@@ -13,12 +13,14 @@ from core.views import (
     ReviewCreateView,
     ServicesListView,
     CategoryServicesView,
-    OrderStatusUpdateView
+    OrderStatusUpdateView,
+    AboutView
 )
 
 urlpatterns = [
     path('', LandingView.as_view(), name='landing'),
     path('thanks/<str:source>/', ThanksViews.as_view(), name='thanks'),
+    path('about/', AboutView.as_view(), name='about'),
     path('orders/', OrdersListView.as_view(), name='orders'),
     path('orders/<int:pk>/', OrderDetailView.as_view(), name='order_detail'),
     path("services_list/", ServicesListView.as_view(), name="service_list"),

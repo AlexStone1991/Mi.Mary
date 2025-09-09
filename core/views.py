@@ -20,6 +20,11 @@ from django.views.generic import (
     CreateView,
     TemplateView,
 )
+
+class AboutView(TemplateView):
+    template_name = "about.html"
+
+
 class OrderStatusUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Order
     form_class = OrderStatusForms
