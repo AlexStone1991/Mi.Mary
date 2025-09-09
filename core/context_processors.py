@@ -13,6 +13,11 @@ def menu_items(request):
             "icon_class": "bi-house",
         },
         {
+            "name": "О нас",
+            "url": reverse("about"),
+            "icon_class": "bi-person",
+        },
+        {
             "name": "Услуги",
             "url": reverse("landing") + "#services_list",
             "icon_class": "bi-scissors",

@@ -30,7 +30,7 @@
             {{ order.get_status_display }}
         </span>
         {% if user.is_staff %}
-            <a href="{% url 'order_status_update' order.id %}" class="btn btn-sm btn-outline-primary ms-2">Редактировать статус</a>
+            <a href="{% url 'order_status_update' order.id %}" class="btn btn-sm btn-outline-dark ms-2">Редактировать статус</a>
         {% endif %}
     </p>
 </div>
@@ -64,13 +64,13 @@
 </div>
 </div>
  
-            {% if order.comment %}
-<div class="card shadow-sm mt-4">
-<div class="card-header bg-light py-3">
-<h5 class="mb-0">Комментарий клиента</h5>
+{% if order.comment %}
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-light py-3">
+            <h5 class="mb-0">Комментарий клиента</h5>
 </div>
-<div class="card-body">
-<p class="text-danger mb-0 fst-italic">"{{ order.comment }}"</p>
+    <div class="card-body">
+<p style="background-color: #ff0000ff; color: whith; font-size: 1rem;" class="badge bg">"{{ order.comment }}"</p>
 </div>
 </div>
             {% endif %}
