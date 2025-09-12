@@ -28,6 +28,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # "jazzmin",
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -145,8 +147,10 @@ LOGOUT_REDIRECT_URL = reverse_lazy("landing")
 AUTH_USER_MODEL = "users.CustomUser"
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1
+
 # Настройки логирования
-# Добавь в конец settings.py
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

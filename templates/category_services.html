@@ -6,6 +6,36 @@
     <div class="card-img-top d-flex justify-content-end">
     <a href="{% url 'landing' %}" class="btn btn-outline-dark ">Назад на главную</a>
     </div>
+    <div class="accordion mb-4" id="searchAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch">
+                <i class="bi bi-search me-2"></i> Поиск и фильтрация
+            </button>
+        </h2>
+        <div id="collapseSearch" class="accordion-collapse collapse {% if search_query %}show{% endif %}" 
+             aria-labelledby="headingOne" data-bs-parent="#searchAccordion">
+            <div class="accordion-body">
+                <form method="get" class="row g-3 align-items-center">
+                    <div class="col-lg-8">
+                        <label for="searchInput" class="visually-hidden">Поиск...</label>
+                        <input type="text" name="q" id="searchInput" class="form-control"
+                               placeholder="Введите название услуги или описание..." value="{{ search_query }}">
+                    </div>
+                    <div class="col-lg-2 text-end">
+                        <button type="submit" class="btn btn-dark w-100">Найти</button>
+                        {% if search_query %}
+                            <a href="{% url 'category_services' category.id %}" class="btn btn-outline-secondary mt-2 w-100">
+                                Сбросить
+                            </a>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <h2 class="text-center mb-4">{{ category.name }}</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for service in services %}

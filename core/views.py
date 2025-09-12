@@ -82,8 +82,18 @@ class CategoryServicesView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         category = get_object_or_404(Category, id=self.kwargs['category_id'])
+        services = category.services.all()
+
+        search_query = self.request.GET.get('q', '')
+        if search_query:
+            services = services.filter(
+                Q(name__icontains=search_query) |
+                Q(description__icontains=search_query)
+            )
+
         context['category'] = category
-        context['services'] = category.services.all()
+        context['services'] = services
+        context['search_query'] = search_query
         context['min_date'] = get_min_appointment_time()
         context['max_date'] = get_max_appointment_time()
         return context
