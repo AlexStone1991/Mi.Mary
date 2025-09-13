@@ -103,13 +103,14 @@ class LandingView(TemplateView):
     template_name = 'landing.html'
 
     def get_context_data(self, **kwargs):
+        now = timezone.now()
         context = super().get_context_data(**kwargs)
-        free_slots = TimeSlot.objects.filter(is_booked=False).order_by('date_time')
+        free_slots = TimeSlot.objects.filter(is_booked=False, date_time__gte=now).order_by('date_time')
         context['free_slots'] = free_slots
         context["categories"] = Category.objects.all()
         context['services'] = Service.objects.all()
         show_all = self.request.GET.get('show_all', False)
-
+        
         # Отзывы с пользователями (оптимизировано)
         all_reviews = Review.objects.filter(is_published=True)
         total_reviews = all_reviews.count()
