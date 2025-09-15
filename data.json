@@ -1,0 +1,3735 @@
+[
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": { "domain": "127.0.0.1:8000", "name": "Mi Mary" }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-09-02T10:27:43.259Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Ресницы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-09-02T10:27:55.657Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Маникюр",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-09-02T10:28:37.593Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Педекюр",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-09-02T10:29:00.235Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Корекция 1.5D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-09-02T12:39:43.702Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Педикюр",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-09-02T12:40:18.821Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Обрезной без покрытия",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-09-02T12:40:49.683Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Обрезной с покрытием",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-09-02T12:41:10.616Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "доп. Укрепление",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-09-02T12:42:36.605Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Наращивание (Все ногти)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-09-02T12:43:06.006Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Один Ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-09-02T12:44:56.676Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "Наклейки (дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-09-02T12:45:28.040Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Стемпинг (дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-09-02T12:46:41.441Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Стразы (дизайн)/1 Ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-09-02T12:47:12.877Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "10",
+      "object_repr": "Стразы (дизайн)/ Все ногти",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-09-02T12:47:48.196Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Фольга (дизайн)/ 1 ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-09-02T12:48:21.630Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Фольга( дизайн)/ Все ногти",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-09-02T12:48:52.829Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "13",
+      "object_repr": "Классика",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-09-02T12:51:22.353Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "14",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-09-02T12:52:01.137Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Корекция 1.5D",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-09-02T12:52:32.375Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "15",
+      "object_repr": "Коррекция",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-09-02T12:53:01.458Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "Наращивание 1.5D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-09-02T12:53:26.090Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "17",
+      "object_repr": "Коррекция 1.5D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-09-02T12:53:48.206Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "18",
+      "object_repr": "Наращивание 2D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-09-02T12:54:06.779Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "19",
+      "object_repr": "Коррекция 2D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-09-02T12:54:32.158Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "20",
+      "object_repr": "Наращивание 2.5D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-09-02T12:54:52.158Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "21",
+      "object_repr": "Коррекция 2.5D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-09-02T12:55:20.190Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "22",
+      "object_repr": "Наращивание 3D и больше",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-09-02T12:55:36.092Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "23",
+      "object_repr": "Коррекция 3D",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-09-02T12:56:28.610Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "24",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2025-09-02T13:14:53.480Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "25",
+      "object_repr": "Обрезной без покрытия",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2025-09-02T13:15:33.701Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "26",
+      "object_repr": "Обрезной с покрытием (Гель лак)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2025-09-02T13:15:52.903Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "27",
+      "object_repr": "Обрезной с покрытием (Пленки)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2025-09-02T13:16:22.920Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "28",
+      "object_repr": "Пальчики с покрытием + пяточки",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2025-09-02T13:16:47.004Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "29",
+      "object_repr": "Пальчики без покрытия + пяточки",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2025-09-02T13:17:23.768Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "30",
+      "object_repr": "Наклейки (Дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2025-09-02T13:17:49.540Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "31",
+      "object_repr": "Стемпинг (Дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2025-09-02T13:18:12.908Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "32",
+      "object_repr": "Стразы (Дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2025-09-02T13:18:38.473Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "33",
+      "object_repr": "Стразы (Дизайн)/Все ногти",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2025-09-02T13:19:09.139Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "34",
+      "object_repr": "Фольга (Дизайн)/ноготь",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2025-09-02T13:19:29.866Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "35",
+      "object_repr": "Фольга (Дизайн)/Все ногти",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2025-09-02T13:32:32.167Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2025-09-02T13:32:50.855Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Заказ 1 - Света",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "7",
+      "object_repr": "Заказ 7 - Наташа",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "6",
+      "object_repr": "Заказ 6 - Наташа",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "5",
+      "object_repr": "Заказ 5 - павпва",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Заказ 4 - авпвап",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Заказ 3 - апапапап",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Заказ 2 - таня",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2025-09-02T18:33:13.398Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Заказ 1 - Света",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2025-09-02T18:34:30.882Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Ресницы",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2025-09-02T18:36:34.134Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Маникюр",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2025-09-02T18:37:52.693Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Педикюр",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2025-09-02T19:08:22.088Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Маникюр",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2025-09-02T19:08:32.651Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Маникюр",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2025-09-02T19:54:55.632Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Отзыв 8 - Василиса",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2025-09-02T20:16:49.660Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Отзыв 11 - куцкуцкцууе",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\", \"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2025-09-02T20:17:16.413Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Отзыв 11 - куцкуцкцууе",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Отзыв 13 - Саша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Отзыв 12 - gdfgfdg",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Отзыв 11 - куцкуцкцууе",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Отзыв 10 - Тварь",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Отзыв 9 - Петр",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Отзыв 8 - Василиса",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Отзыв 7 - vjdfhjghrdgj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Отзыв 6 - Марго",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Отзыв 5 - ишак",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Отзыв 4 - fdsfgdsgdfs",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Отзыв 3 - gfdgfdg",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Отзыв 2 - fgdjkghfdnjkgd",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2025-09-03T07:03:22.004Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Отзыв 1 - fgdjkghfdnjkgd",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2025-09-03T07:03:39.367Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Отзыв 14 - Алеша",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2025-09-04T10:26:42.036Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "11",
+      "object_repr": "Заказ 11 - павпкуп",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "14",
+      "object_repr": "Заказ 14 - fgerretg",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "13",
+      "object_repr": "Заказ 13 - fdgdgfd",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "12",
+      "object_repr": "Заказ 12 - акуаукеу",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "11",
+      "object_repr": "Заказ 11 - павпкуп",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "10",
+      "object_repr": "Заказ 10 - апвпвып",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "9",
+      "object_repr": "Заказ 9 - fdfew",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2025-09-04T11:11:31.212Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "8",
+      "object_repr": "Заказ 8 - Саша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Александра",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "Алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Василиса",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "Василиса1",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Кристина",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "Кристина1",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2025-09-04T11:12:00.754Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "Петр",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2025-09-07T09:50:15.347Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Отзыв 18 - екуеуцеку",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2025-09-07T09:50:29.267Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "23",
+      "object_repr": "Заказ 23 - dfgdfgdfg",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2025-09-07T09:50:29.267Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "22",
+      "object_repr": "Заказ 22 - вапып",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2025-09-07T09:50:29.267Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "21",
+      "object_repr": "Заказ 21 - евпавпавпав",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2025-09-07T09:50:29.267Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "20",
+      "object_repr": "Заказ 20 - Алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2025-09-07T10:58:09.073Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "14",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2025-09-07T11:02:43.080Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "доп. Укрепление",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2025-09-07T11:05:17.957Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Обрезной без покрытия",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2025-09-07T11:05:28.568Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Обрезной с покрытием",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2025-09-07T11:05:53.453Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Наращивание (Все ногти)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2025-09-07T11:06:18.956Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Один Ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2025-09-07T11:06:48.344Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Один Ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2025-09-07T11:06:59.438Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Один Ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2025-09-07T11:07:46.774Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "Наклейки (дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2025-09-07T11:08:36.858Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Стемпинг (дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2025-09-07T11:08:52.406Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Стразы (дизайн)/1 Ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+      "action_time": "2025-09-07T11:09:02.090Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Фольга( дизайн)/ Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+      "action_time": "2025-09-07T11:09:12.806Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Фольга (дизайн)/ 1 ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+      "action_time": "2025-09-07T11:09:24.039Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "10",
+      "object_repr": "Стразы (дизайн)/ Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+      "action_time": "2025-09-07T11:09:31.166Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Стразы (дизайн)/1 Ноготь",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+      "action_time": "2025-09-07T11:11:31.862Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "36",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+      "action_time": "2025-09-07T11:12:11.679Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "25",
+      "object_repr": "Обрезной без покрытия",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+      "action_time": "2025-09-07T11:12:41.756Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "26",
+      "object_repr": "Обрезной с покрытием (Гель лак)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+      "action_time": "2025-09-07T11:12:54.066Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "27",
+      "object_repr": "Обрезной с покрытием (Пленки)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+      "action_time": "2025-09-07T11:13:30.661Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "28",
+      "object_repr": "Пальчики с покрытием + пяточки",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+      "action_time": "2025-09-07T11:14:11.248Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "29",
+      "object_repr": "Пальчики без покрытия + пяточки",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+      "action_time": "2025-09-07T12:12:59.435Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "30",
+      "object_repr": "Наклейки (Дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+      "action_time": "2025-09-07T12:16:18.889Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "31",
+      "object_repr": "Стемпинг (Дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+      "action_time": "2025-09-07T12:21:19.047Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "32",
+      "object_repr": "Стразы (Дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+      "action_time": "2025-09-07T12:21:27.546Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "33",
+      "object_repr": "Стразы (Дизайн)/Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+      "action_time": "2025-09-07T12:22:35.099Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "34",
+      "object_repr": "Фольга (Дизайн)/ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+      "action_time": "2025-09-07T12:22:41.849Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "35",
+      "object_repr": "Фольга (Дизайн)/Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+      "action_time": "2025-09-07T12:23:43.924Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "15",
+      "object_repr": "Коррекция",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+      "action_time": "2025-09-07T12:23:55.601Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "21",
+      "object_repr": "Коррекция 2.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+      "action_time": "2025-09-07T12:24:04.018Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "23",
+      "object_repr": "Коррекция 3D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+      "action_time": "2025-09-07T12:25:43.511Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "Наращивание 1.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+      "action_time": "2025-09-07T12:26:22.153Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "17",
+      "object_repr": "Коррекция 1.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+      "action_time": "2025-09-07T12:26:44.226Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "13",
+      "object_repr": "Классика",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+      "action_time": "2025-09-07T12:27:24.000Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "21",
+      "object_repr": "Коррекция 2.5D",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+      "action_time": "2025-09-07T12:27:35.192Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "19",
+      "object_repr": "Коррекция 2D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+      "action_time": "2025-09-07T12:28:01.112Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "22",
+      "object_repr": "Наращивание 3D и больше",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+      "action_time": "2025-09-07T12:28:12.326Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "20",
+      "object_repr": "Наращивание 2.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+      "action_time": "2025-09-07T12:29:10.571Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "Наращивание 1.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+      "action_time": "2025-09-07T12:29:22.628Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "16",
+      "object_repr": "Наращивание 1.5D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+      "action_time": "2025-09-07T12:30:24.325Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "18",
+      "object_repr": "Наращивание 2D",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+      "action_time": "2025-09-07T12:32:52.024Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "24",
+      "object_repr": "Снятие чужой работы",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+      "action_time": "2025-09-07T12:34:11.313Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Фольга (дизайн)/ 1 ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+      "action_time": "2025-09-07T12:34:23.268Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Фольга (дизайн)/ 1 ноготь",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+      "action_time": "2025-09-07T12:34:29.311Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Фольга( дизайн)/ Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+      "action_time": "2025-09-07T12:34:38.431Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Фольга( дизайн)/ Все ногти",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+      "action_time": "2025-09-07T13:22:23.387Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "Наталья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+      "action_time": "2025-09-09T07:00:00.561Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "11.09.2025 - 17:30",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+      "action_time": "2025-09-09T07:00:28.073Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "12.09.2025 - 19:30",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+      "action_time": "2025-09-09T07:00:49.556Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "13.09.2025 - 11:00",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+      "action_time": "2025-09-09T07:01:01.968Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "13.09.2025 - 13:00",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+      "action_time": "2025-09-09T10:13:08.664Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "1",
+      "object_repr": "11.09.2025 - 14:30",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+      "action_time": "2025-09-09T10:13:08.664Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "2",
+      "object_repr": "12.09.2025 - 16:30",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+      "action_time": "2025-09-09T10:13:08.664Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "3",
+      "object_repr": "13.09.2025 - 08:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+      "action_time": "2025-09-09T10:13:08.664Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "4",
+      "object_repr": "13.09.2025 - 10:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+      "action_time": "2025-09-09T10:32:31.944Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "24",
+      "object_repr": "Заказ 24 - Светлана",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+      "action_time": "2025-09-09T10:32:56.951Z",
+      "user": 1,
+      "content_type": 12,
+      "object_id": "5",
+      "object_repr": "04.09.2025 - 14:30",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is booked\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+      "action_time": "2025-09-09T18:37:18.074Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "19",
+      "object_repr": "Заказ 19 - Кристина",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+      "action_time": "2025-09-09T18:37:18.074Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "17",
+      "object_repr": "Заказ 17 - Томара",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "24",
+      "object_repr": "Отзыв 24 - алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "23",
+      "object_repr": "Отзыв 23 - алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "22",
+      "object_repr": "Отзыв 22 - тиоио",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "20",
+      "object_repr": "Отзыв 20 - Наталья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "19",
+      "object_repr": "Отзыв 19 - Наталья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Отзыв 16 - Митя",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Отзыв 15 - Вася",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+      "action_time": "2025-09-09T18:37:41.870Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Отзыв 14 - Алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+      "action_time": "2025-09-12T14:58:37.888Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "15",
+      "object_repr": "Заказ 15 - Василиса",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+      "action_time": "2025-09-13T08:45:52.337Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "example.com",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+      "action_time": "2025-09-13T09:15:52.395Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "127.0.0.1:8000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+      "action_time": "2025-09-13T09:50:05.034Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "25",
+      "object_repr": "Отзыв 25 - Наталья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+      "action_time": "2025-09-13T09:51:52.002Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "127.0.0.1:8000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+      "action_time": "2025-09-13T09:52:31.876Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "12",
+      "object_repr": "Алекс",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+      "action_time": "2025-09-13T09:52:31.876Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "11",
+      "object_repr": "Алексей",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+      "action_time": "2025-09-13T10:44:43.449Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "32",
+      "object_repr": "Отзыв 32 - ыавыаывавыа",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+      "action_time": "2025-09-13T10:44:43.449Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "31",
+      "object_repr": "Отзыв 31 - павпавпва",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+      "action_time": "2025-09-13T10:44:43.449Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "30",
+      "object_repr": "Отзыв 30 - атвлправолп",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+      "action_time": "2025-09-13T10:44:43.449Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "29",
+      "object_repr": "Отзыв 29 - пукекуеп",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+      "action_time": "2025-09-13T10:44:43.449Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "28",
+      "object_repr": "Отзыв 28 - пукекуеп",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+      "action_time": "2025-09-13T18:57:08.881Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "example.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+      "action_time": "2025-09-13T19:11:05.557Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "http://127.0.0.1:8000/",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+      "action_time": "2025-09-14T14:32:55.502Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "Отзыв 39 - m lnkbjvhcgxchvjbkn",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+      "action_time": "2025-09-14T14:32:55.502Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "38",
+      "object_repr": "Отзыв 38 - fdkgdflnhf",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+      "action_time": "2025-09-14T14:32:55.502Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "37",
+      "object_repr": "Отзыв 37 - gjndfgldf",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+      "action_time": "2025-09-14T14:32:55.502Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "36",
+      "object_repr": "Отзыв 36 - ngjkfdhgjfdg",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+      "action_time": "2025-09-14T14:32:55.502Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "35",
+      "object_repr": "Отзыв 35 - gdfgfsdgadtfghd",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+      "action_time": "2025-09-14T16:20:31.467Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "43",
+      "object_repr": "Отзыв 43 - алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+      "action_time": "2025-09-14T16:20:31.467Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "42",
+      "object_repr": "Отзыв 42 - алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+      "action_time": "2025-09-14T16:20:31.467Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "41",
+      "object_repr": "Отзыв 41 - Алеша",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+      "action_time": "2025-09-14T16:20:31.467Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "40",
+      "object_repr": "Отзыв 40 - АЛЕША",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+      "action_time": "2025-09-14T16:43:20.184Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "127.0.0.1:8000",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Domain name\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add history entry",
+      "content_type": 6,
+      "codename": "add_historyentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change history entry",
+      "content_type": 6,
+      "codename": "change_historyentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete history entry",
+      "content_type": 6,
+      "codename": "delete_historyentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view history entry",
+      "content_type": 6,
+      "codename": "view_historyentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Категория",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Категория",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Категория",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Категория",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Отзыв",
+      "content_type": 8,
+      "codename": "add_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Отзыв",
+      "content_type": 8,
+      "codename": "change_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Отзыв",
+      "content_type": 8,
+      "codename": "delete_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Отзыв",
+      "content_type": 8,
+      "codename": "view_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Услуга",
+      "content_type": 9,
+      "codename": "add_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Услуга",
+      "content_type": 9,
+      "codename": "change_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Услуга",
+      "content_type": 9,
+      "codename": "delete_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Услуга",
+      "content_type": 9,
+      "codename": "view_service"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Заказ",
+      "content_type": 10,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Заказ",
+      "content_type": 10,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Заказ",
+      "content_type": 10,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Заказ",
+      "content_type": 10,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 11,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 11,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 11,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 11,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add time slot",
+      "content_type": 12,
+      "codename": "add_timeslot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change time slot",
+      "content_type": 12,
+      "codename": "change_timeslot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete time slot",
+      "content_type": 12,
+      "codename": "delete_timeslot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view time slot",
+      "content_type": 12,
+      "codename": "view_timeslot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 13,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 13,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 13,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 13,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "debug_toolbar", "model": "historyentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "core", "model": "category" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "core", "model": "review" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "core", "model": "service" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "core", "model": "order" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "users", "model": "customuser" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "core", "model": "timeslot" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "sites", "model": "site" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "afpfgwzq0o47gqlsdhuehx8arg8mq7n5",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGll27PWHkj5nsNbeDQ6gRIqTCnF3EikFtG9m3lsk3NaatsZLGklchRaX3y1jefJ0AHrgdJ9lmad1GbM8FHnSJvuZ-HU73b-Diq3udTQlKBOjIkBAazrKzsVgyeYwgIcIYJEtd9pE5l31IWszoFZATrMXny--4jb1:1uxqCM:cIUVDCLW7mGBBywO7wLLSoN9ow8fmq0rXeGHfc-m9sY",
+      "expire_date": "2025-09-28T17:07:34.609Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "e07drg2atkt1f199t8tr7iwlpzq6f2q3",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGll27PWHkj5nsNbeDQ6gRIqTCnF3EikFtG9m3lsk3NaatsZLGklchRaX3y1jefJ0AHrgdJ9lmad1GbM8FHnSJvuZ-HU73b-Diq3udTQlKBOjIkBAazrKzsVgyeYwgIcIYJEtd9pE5l31IWszoFZATrMXny--4jb1:1uuXdX:GUcptg4yruBX4BLMMo5YCkyrHbxeYLSLs7l35SdrD_w",
+      "expire_date": "2025-09-19T14:41:59.902Z"
+    }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 5,
+    "fields": { "date_time": "2025-09-04T14:30:00Z", "is_booked": true }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 6,
+    "fields": { "date_time": "2025-09-05T14:30:00Z", "is_booked": true }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 7,
+    "fields": { "date_time": "2025-09-05T16:30:00Z", "is_booked": true }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 8,
+    "fields": { "date_time": "2025-09-06T08:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 9,
+    "fields": { "date_time": "2025-09-06T12:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 10,
+    "fields": { "date_time": "2025-09-11T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 11,
+    "fields": { "date_time": "2025-09-12T16:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 12,
+    "fields": { "date_time": "2025-09-13T08:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 13,
+    "fields": { "date_time": "2025-09-13T10:00:00Z", "is_booked": true }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 14,
+    "fields": { "date_time": "2025-09-16T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 15,
+    "fields": { "date_time": "2025-09-17T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 16,
+    "fields": { "date_time": "2025-09-19T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 17,
+    "fields": { "date_time": "2025-09-19T16:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 18,
+    "fields": { "date_time": "2025-09-20T08:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 19,
+    "fields": { "date_time": "2025-09-20T10:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 20,
+    "fields": { "date_time": "2025-09-20T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 21,
+    "fields": { "date_time": "2025-09-22T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 22,
+    "fields": { "date_time": "2025-09-23T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 23,
+    "fields": { "date_time": "2025-09-24T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 24,
+    "fields": { "date_time": "2025-09-25T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 25,
+    "fields": { "date_time": "2025-09-26T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 26,
+    "fields": { "date_time": "2025-09-27T12:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 27,
+    "fields": { "date_time": "2025-09-27T14:00:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 28,
+    "fields": { "date_time": "2025-09-29T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.timeslot",
+    "pk": 29,
+    "fields": { "date_time": "2025-09-30T14:30:00Z", "is_booked": false }
+  },
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "name": "Ресницы",
+      "image": "categories/a395bb422190fafb69ceb87faf565a7d.jpg",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "name": "Маникюр",
+      "image": "categories/AA1D3dIL.jpeg",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "name": "Педикюр",
+      "image": "categories/647467b8fb300d39000dbd42_648b34d42f87f9.03079687.jpg",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Обрезной без покрытия",
+      "description": "",
+      "price": "500.00",
+      "is_popular": false,
+      "image": "services/classic-manicure-without-coating.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Обрезной с покрытием",
+      "description": "",
+      "price": "1100.00",
+      "is_popular": false,
+      "image": "services/manicure-with-gel-polish.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "доп. Укрепление",
+      "description": "",
+      "price": "100.00",
+      "is_popular": false,
+      "image": "services/nail-strengthening.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "Наращивание (Все ногти)",
+      "description": "",
+      "price": "2000.00",
+      "is_popular": false,
+      "image": "services/nail-extensions.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "name": "Один Ноготь",
+      "description": "",
+      "price": "200.00",
+      "is_popular": false,
+      "image": "services/single-nail-repair-extension.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "name": "Наклейки (дизайн)/ноготь",
+      "description": "",
+      "price": "100.00",
+      "is_popular": false,
+      "image": "services/nail-design.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "name": "Стемпинг (дизайн)/ноготь",
+      "description": "",
+      "price": "50.00",
+      "is_popular": false,
+      "image": "services/nail-design_yW8wd6M.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "name": "Стразы (дизайн)/1 Ноготь",
+      "description": "",
+      "price": "20.00",
+      "is_popular": false,
+      "image": "services/nail-design_NfiyXn1.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "name": "Стразы (дизайн)/ Все ногти",
+      "description": "",
+      "price": "200.00",
+      "is_popular": false,
+      "image": "services/nail-design_BkjOphY.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "name": "Фольга (дизайн)/ 1 ноготь",
+      "description": "",
+      "price": "10.00",
+      "is_popular": false,
+      "image": "services/c79e112aa4643adf4fb97001eba177a3.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "name": "Фольга( дизайн)/ Все ногти",
+      "description": "",
+      "price": "100.00",
+      "is_popular": false,
+      "image": "services/c79e112aa4643adf4fb97001eba177a3_b1q4HHc.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 13,
+    "fields": {
+      "category": 1,
+      "name": "Классика",
+      "description": "",
+      "price": "1700.00",
+      "is_popular": false,
+      "image": "services/classic-eyelash-extensions_rAMuWSc.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 14,
+    "fields": {
+      "category": 2,
+      "name": "Снятие чужой работы",
+      "description": "",
+      "price": "500.00",
+      "is_popular": false,
+      "image": "services/gel-removal.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 15,
+    "fields": {
+      "category": 1,
+      "name": "Коррекция",
+      "description": "",
+      "price": "1200.00",
+      "is_popular": false,
+      "image": "services/eyelash-correction-2.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 16,
+    "fields": {
+      "category": 1,
+      "name": "Наращивание 1.5D",
+      "description": "",
+      "price": "1900.00",
+      "is_popular": false,
+      "image": "services/diploma.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 17,
+    "fields": {
+      "category": 1,
+      "name": "Коррекция 1.5D",
+      "description": "",
+      "price": "1300.00",
+      "is_popular": false,
+      "image": "services/eyelash-correction-2_ExUr1Bh.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 18,
+    "fields": {
+      "category": 1,
+      "name": "Наращивание 2D",
+      "description": "",
+      "price": "2200.00",
+      "is_popular": false,
+      "image": "services/5ce9076f132ca583d7584852.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 19,
+    "fields": {
+      "category": 1,
+      "name": "Коррекция 2D",
+      "description": "",
+      "price": "1500.00",
+      "is_popular": false,
+      "image": "services/eyelash-correction_ffL0ztj.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 20,
+    "fields": {
+      "category": 1,
+      "name": "Наращивание 2.5D",
+      "description": "",
+      "price": "2400.00",
+      "is_popular": false,
+      "image": "services/volume-eyelash-extensions-1-5d-2-5d-v2.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 21,
+    "fields": {
+      "category": 1,
+      "name": "Коррекция 2.5D",
+      "description": "",
+      "price": "1600.00",
+      "is_popular": false,
+      "image": "services/eyelash-correction.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 22,
+    "fields": {
+      "category": 1,
+      "name": "Наращивание 3D и больше",
+      "description": "",
+      "price": "2700.00",
+      "is_popular": false,
+      "image": "services/volume-eyelash-extensions-1-5d-2-5d.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 23,
+    "fields": {
+      "category": 1,
+      "name": "Коррекция 3D",
+      "description": "",
+      "price": "1700.00",
+      "is_popular": false,
+      "image": "services/eyelash-correction-2_ZuEMcjy.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 24,
+    "fields": {
+      "category": 1,
+      "name": "Снятие чужой работы",
+      "description": "",
+      "price": "500.00",
+      "is_popular": false,
+      "image": "services/5ddce61180e08ebe52495752.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 25,
+    "fields": {
+      "category": 3,
+      "name": "Обрезной без покрытия",
+      "description": "",
+      "price": "500.00",
+      "is_popular": false,
+      "image": "services/classic-pedicure-without-coating.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 26,
+    "fields": {
+      "category": 3,
+      "name": "Обрезной с покрытием (Гель лак)",
+      "description": "",
+      "price": "1100.00",
+      "is_popular": false,
+      "image": "services/pedicure-with-gel-polish.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 27,
+    "fields": {
+      "category": 3,
+      "name": "Обрезной с покрытием (Пленки)",
+      "description": "",
+      "price": "1300.00",
+      "is_popular": false,
+      "image": "services/pedicure-with-gel-polish-v3.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 28,
+    "fields": {
+      "category": 3,
+      "name": "Пальчики с покрытием + пяточки",
+      "description": "",
+      "price": "1700.00",
+      "is_popular": false,
+      "image": "services/pedicure-with-gel-polish-v2.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 29,
+    "fields": {
+      "category": 3,
+      "name": "Пальчики без покрытия + пяточки",
+      "description": "",
+      "price": "1100.00",
+      "is_popular": false,
+      "image": "services/express-pedicure-corrected.webp"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 30,
+    "fields": {
+      "category": 3,
+      "name": "Наклейки (Дизайн)/ноготь",
+      "description": "",
+      "price": "100.00",
+      "is_popular": false,
+      "image": "services/Леопардовии_Принт.jpeg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 31,
+    "fields": {
+      "category": 3,
+      "name": "Стемпинг (Дизайн)/ноготь",
+      "description": "",
+      "price": "50.00",
+      "is_popular": false,
+      "image": "services/63d2b805435987e675a2f691d783cfad.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 32,
+    "fields": {
+      "category": 3,
+      "name": "Стразы (Дизайн)/ноготь",
+      "description": "",
+      "price": "20.00",
+      "is_popular": false,
+      "image": "services/8bba00491ffe128928f07c71b65e3b90.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 33,
+    "fields": {
+      "category": 3,
+      "name": "Стразы (Дизайн)/Все ногти",
+      "description": "",
+      "price": "200.00",
+      "is_popular": false,
+      "image": "services/8bba00491ffe128928f07c71b65e3b90_cGu3rrk.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 34,
+    "fields": {
+      "category": 3,
+      "name": "Фольга (Дизайн)/ноготь",
+      "description": "",
+      "price": "10.00",
+      "is_popular": false,
+      "image": "services/9ca03c8da9d2111f3204d32619e639a6.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 35,
+    "fields": {
+      "category": 3,
+      "name": "Фольга (Дизайн)/Все ногти",
+      "description": "",
+      "price": "100.00",
+      "is_popular": false,
+      "image": "services/9ca03c8da9d2111f3204d32619e639a6_Dp4otpy.jpg"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 36,
+    "fields": {
+      "category": 3,
+      "name": "Снятие чужой работы",
+      "description": "",
+      "price": "500.00",
+      "is_popular": false,
+      "image": "services/gel-removal_B86Q8KA.webp"
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 16,
+    "fields": {
+      "client_name": "Таня",
+      "phone": "89994563423",
+      "comment": "Пробка в ухе",
+      "status": "new",
+      "date_created": "2025-09-04T14:32:20.867Z",
+      "date_updated": "2025-09-04T14:32:20.867Z",
+      "appointment_date": "2025-09-17T14:00:00Z",
+      "services": [18]
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 18,
+    "fields": {
+      "client_name": "Кристина",
+      "phone": "89993456758",
+      "comment": "Пробный запуск привет Татьяна",
+      "status": "confirmed",
+      "date_created": "2025-09-04T18:02:46.467Z",
+      "date_updated": "2025-09-07T13:15:42.684Z",
+      "appointment_date": "2025-09-05T13:00:00Z",
+      "services": [3]
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 25,
+    "fields": {
+      "client_name": "Инна",
+      "phone": "89995643423",
+      "comment": "Привет",
+      "status": "new",
+      "date_created": "2025-09-09T18:24:05.462Z",
+      "date_updated": "2025-09-09T18:24:05.462Z",
+      "appointment_date": "2025-09-06T08:00:00Z",
+      "services": [3, 14]
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 26,
+    "fields": {
+      "client_name": "Алена",
+      "phone": "89994653786",
+      "comment": "",
+      "status": "new",
+      "date_created": "2025-09-09T18:36:03.675Z",
+      "date_updated": "2025-09-09T18:36:03.675Z",
+      "appointment_date": "2025-09-05T14:30:00Z",
+      "services": [2]
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 27,
+    "fields": {
+      "client_name": "таня",
+      "phone": "7843856437853",
+      "comment": "",
+      "status": "new",
+      "date_created": "2025-09-12T16:18:51.059Z",
+      "date_updated": "2025-09-12T16:18:51.059Z",
+      "appointment_date": "2025-09-05T16:30:00Z",
+      "services": [13]
+    }
+  },
+  {
+    "model": "core.order",
+    "pk": 28,
+    "fields": {
+      "client_name": "Инна",
+      "phone": "9876757689",
+      "comment": "равлопавоплдав",
+      "status": "new",
+      "date_created": "2025-09-13T09:58:04.238Z",
+      "date_updated": "2025-09-13T09:58:04.238Z",
+      "appointment_date": "2025-09-13T10:00:00Z",
+      "services": [2]
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 17,
+    "fields": {
+      "text": "Вы просто прекрасная студия",
+      "client_name": "Инна",
+      "photo": "",
+      "created_at": "2025-09-04",
+      "rating": 5,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 21,
+    "fields": {
+      "text": "Какие вы молодцы! сделали такую красоту) советую всем",
+      "client_name": "Наталья",
+      "photo": "",
+      "created_at": "2025-09-07",
+      "rating": 5,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 26,
+    "fields": {
+      "text": "Спасибо большое Вам Татьяна за прекрасную красоту)))",
+      "client_name": "Светлана",
+      "photo": "",
+      "created_at": "2025-09-13",
+      "rating": 5,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 27,
+    "fields": {
+      "text": "Я в восторге от вашей студии красоты",
+      "client_name": "Инна",
+      "photo": "",
+      "created_at": "2025-09-13",
+      "rating": 5,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 33,
+    "fields": {
+      "text": "Вы супер пупер",
+      "client_name": "Васька",
+      "photo": "",
+      "created_at": "2025-09-13",
+      "rating": 4,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "core.review",
+    "pk": 34,
+    "fields": {
+      "text": "вау вау",
+      "client_name": "Ирина",
+      "photo": "",
+      "created_at": "2025-09-13",
+      "rating": 4,
+      "is_published": true,
+      "status": "ai_approved"
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fTtGiOhAoUlS0Db4jGzzxS$6UasRC9psUaCTvz7iFMhtBV5BFWb4aFzGagMMxwzbKg=",
+      "last_login": "2025-09-14T17:07:34.603Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@bk.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-09-02T10:12:25.793Z",
+      "avatar": "avarars/Tz4zN1buH-UwrGL_nb1i_PYYPyLHHVsB702plqYdWF9MTVVYBkLu4CiX54hZf8M5H5fiAhJp438dIIyODl2bud4y.jpg",
+      "phone": "89534273479",
+      "birthday": "1991-03-21",
+      "vk_id": "https://vk.com/lapshin_alexey",
+      "tg_id": "@Laps_alex",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$AZgMtRa4NGw00809x7g6Ns$Q0+l7C17mWN4Bkw6Vb9YNuZSj+Pz0fFM8w0WddFpXAk=",
+      "last_login": "2025-09-07T13:23:04.506Z",
+      "is_superuser": false,
+      "username": "Наталья",
+      "first_name": "",
+      "last_name": "",
+      "email": "Natali@bk.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-09-07T13:23:03.871Z",
+      "avatar": "",
+      "phone": null,
+      "birthday": null,
+      "vk_id": null,
+      "tg_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$NhX9g1ktUdGAsZP6agS9sv$9dabYtj7ad7L/6VR5FsIdu9HHieck7PtjaPO6Z1SX0M=",
+      "last_login": "2025-09-13T09:53:06.729Z",
+      "is_superuser": false,
+      "username": "Алексей",
+      "first_name": "",
+      "last_name": "",
+      "email": "solo-drive@bk.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-09-13T09:53:01.477Z",
+      "avatar": "",
+      "phone": null,
+      "birthday": null,
+      "vk_id": null,
+      "tg_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$oj87pi0UnsHWwh03DG4xC2$7YvqtclqRV3Wsntcad3guyW3XGZ4QK05O3FMtoeIL9I=",
+      "last_login": "2025-09-13T19:25:22.993Z",
+      "is_superuser": false,
+      "username": "Алекс",
+      "first_name": "",
+      "last_name": "",
+      "email": "carnage03211991@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-09-13T19:25:17.740Z",
+      "avatar": "",
+      "phone": null,
+      "birthday": null,
+      "vk_id": null,
+      "tg_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
