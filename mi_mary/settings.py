@@ -19,7 +19,20 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG_MODE", "True") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '5.129.251.229',  # Ваш IP сервера
+    'mi-mary.ru'  # Если есть домен
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://5.129.251.229',
+    'https://5.129.251.229',
+    'http://mi-mary.ru',
+    'https://mi-mary.ru'
+]
+
 
 
 
