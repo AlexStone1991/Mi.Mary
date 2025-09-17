@@ -35,12 +35,12 @@ def send_order_notification(instance):
     """Функция для отправки уведомления о заказе"""
     try:
         list_services = [service.name for service in instance.services.all()]
-        appointment_date = instance.appointment_date.strftime("%d.%m.%Y") if instance.appointment_date else "Не указана"
+        appointment_date = instance.appointment_date.strftime("%d.%m.%Y %H:%M") if instance.appointment_date else "Не указана"
         tg_markdown_message = f"""
 ======Новый заказ!======
 Имя: {instance.client_name}
 Телефон: {instance.phone}
-Дата записи: {appointment_date}
+Дата и время записи: {appointment_date}
 Услуги: {', '.join(list_services)}
 Комментарий: {instance.comment}
 Подробнее: http://127.0.0.1:8000/admin/core/order/{instance.id}/change/

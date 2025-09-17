@@ -223,12 +223,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const servicesContainer = document.getElementById('servicesContainer');
     const servicesList = document.getElementById('servicesList');
     const submitButton = document.getElementById('submitButton');
+    const appointmentDateField = document.getElementById('id_appointment_date');
+    
+    // Переменная для хранения текущего slotId
+    let currentSlotId = null;
 
     // Обработчик открытия модального окна
     orderModal.addEventListener('show.bs.modal', function(event) {
         const button = event.relatedTarget;
         const slotDatetime = button.getAttribute('data-slot-datetime');
-        document.getElementById('id_appointment_date').value = slotDatetime;
+        currentSlotId = button.getAttribute('data-slot-id'); // Сохраняем ID слота
+        
+        // Устанавливаем дату и время выбранного слота
+        appointmentDateField.value = slotDatetime;
+        
+        // Сбрасываем только часть формы, но не поле с датой
+        document.getElementById('id_client_name').value = '';
+        document.getElementById('id_phone').value = '';
+        document.getElementById('id_comment').value = '';
+        
+        // Сбрасываем выбор категорий и услуг
+        document.querySelectorAll('input[name="category"]').forEach(radio => {
+            radio.checked = false;
+        });
+        document.querySelectorAll('input[name="services"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        
+        servicesContainer.style.display = 'none';
+        submitButton.disabled = true;
     });
 
     // Обработчик выбора категории
@@ -262,6 +285,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработчик отправки формы
     orderForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        if (!currentSlotId) {
+            alert("Ошибка: не выбран временной слот");
+            return;
+        }
+        
         const formData = new FormData(orderForm);
         fetch("{% url 'create_order' %}", {
             method: 'POST',
@@ -274,16 +303,25 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                const slotId = document.querySelector('[data-slot-id]').getAttribute('data-slot-id');
-                fetch(`/api/book-slot/${slotId}/`, {
+                // Используем сохраненный currentSlotId
+                fetch(`/api/book-slot/${currentSlotId}/`, {
                     method: 'POST',
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
                         'X-CSRFToken': orderForm.querySelector('[name=csrfmiddlewaretoken]').value
                     }
                 })
-                .then(() => {
-                    window.location.href = "{% url 'thanks' 'create_order' %}";
+                .then(response => response.json())
+                .then(bookData => {
+                    if (bookData.success) {
+                        window.location.href = "{% url 'thanks' 'create_order' %}";
+                    } else {
+                        alert("Ошибка при бронировании слота");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("Ошибка при бронировании слота");
                 });
             } else {
                 alert("Произошла ошибка. Проверьте данные и попробуйте снова.");
