@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-6 text-end animate__animated animate__fadeInRight">
                 <h4>Добро пожаловать в салон красоты "Mi Mary"! Мы специализируемся на создании неповторимого образа для каждого клиента.</h4>
-                <h4>Наш Мастер используют только профессиональные средства и современные техники.</h4>
+                <h4>Наш мастер использует только профессиональные средства и современные техники.</h4>
                 <h4>Вы всегда красивы, а мы поможем вам сиять ещё ярче!</h4>
             </div>
         </div>
@@ -163,6 +163,10 @@
             {% for review in reviews %}
             <div class="col-md-4 mb-4">
                 <div class="card h-100 review-card">
+                    <!-- ДОБАВЬ ЭТУ ПРОВЕРКУ ДЛЯ ФОТО -->
+                    {% if review.photo %}
+                    <img src="{{ review.photo.url }}" class="card-img-top" alt="Отзыв от {{ review.client_name }}" style="height: 200px; object-fit: cover;">
+                    {% endif %}
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <h5 class="card-title mb-0">{{ review.client_name }}</h5>
