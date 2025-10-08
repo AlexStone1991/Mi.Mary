@@ -194,23 +194,31 @@
     </div>
 </section>
 
-<footer class="bg-dark text-white py-4">
+<!-- Футер БЕЗ карты внутри -->
+<footer class="bg-white text-dark py-4" style="background-color: rgba(255, 255, 255, 0.459) !important; border: 1px solid #000000;">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-3">
                 <h5>Mi Mary</h5>
                 <p>Студия красоты</p>
                 <p><i class="bi bi-geo-alt"></i> Ул. Маяковского, 25, офис 232, Новомосковск</p>
+                
+                <!-- Только кнопка в футере -->
+                <a href="https://yandex.ru/maps/10830/novomoskovsk/house/ulitsa_mayakovskogo_25/Z0EYdA5oT0EPQFtufXxxdXRmYQ==/?ll=38.298648%2C54.004855&z=19.63" 
+                   target="_blank" 
+                   class="btn btn-outline-dark btn-sm mt-2">
+                    <i class="bi bi-map"></i> Как добраться
+                </a>
             </div>
             <div class="col-md-4 mb-3">
                 <h5>Контакты</h5>
-                <p><i class="bi bi-telephone"></i> <a href="tel:+79509696635" class="text-white">+7 (950) 969-66-35</a></p>
+                <p><i class="bi bi-telephone"></i> <a href="tel:+79509696635" class="text-dark">+7 (950) 969-66-35</a></p>
                 <p><i class="bi bi-envelope"></i> mi.mary.nmsk@mail.ru</p>
             </div>
             <div class="col-md-4 mb-3">
                 <h5>Социальные сети</h5>
-                <p><i class="bi bi-telegram"></i> <a href="https://t.me/mi_mary_nmsk" class="text-white">Telegram</a></p>
-                <p><i class="bi bi-vk"></i> <a href="https://vk.com/mi.mary.nmsk71" class="text-white">VK</a></p>
+                <p><i class="bi bi-telegram"></i> <a href="https://t.me/mimarynmsk71" class="text-dark">Telegram</a></p>
+                <p><i class="bi bi-chat-dots"></i> <a href="https://vk.com/mi.mary.nmsk71" class="text-dark">VK</a></p>
             </div>
         </div>
         <div class="text-center mt-3">
@@ -374,5 +382,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Добавь в конец скрипта
+document.addEventListener('DOMContentLoaded', function() {
+    // Фикс для мобильного скролла
+    function fixMobileScroll() {
+        if (window.innerWidth < 768) {
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.style.overflowX = 'hidden';
+        }
+    }
+    
+    fixMobileScroll();
+    window.addEventListener('resize', fixMobileScroll);
+    
+    // Дополнительно: закрываем меню при клике на ссылку
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar-collapse');
+            if (navbar.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(navbar).hide();
+            }
+        });
+    });
+});
 </script>
+
 {% endblock %}

@@ -140,12 +140,12 @@
     </div>
 </section>
 
-<section id="cta" class="py-5 bg-dark text-white">
+<section id="cta" class="bg-white text-dark py-4" style="background-color: rgba(255, 255, 255, 0.459) !important; border: 1px solid #000000;">
     <div class="container text-center animate__animated animate__fadeInUp">
         <h3 class="mb-4">Готовы преобразиться?</h3>
         <p class="lead mb-4">Запишитесь на консультацию и получите индивидуальные рекомендации</p>
-        <a href="{% url 'landing' %}#free-slots" class="btn btn-light btn-lg px-5 cta-btn">
-            <i class="bi bi-calendar-check me-2"></i>Выбрать время
+        <a href="{% url 'landing' %}#free-slots" class="btn btn-dark btn-lg px-5 cta-btn">
+            <i class="bi bi-calendar-check me-2"></i>Выбрать дату и время
         </a>
     </div>
 </section>
@@ -267,6 +267,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth',
                     block: 'start'
                 });
+            }
+        });
+    });
+});
+// Добавь в конец скрипта
+document.addEventListener('DOMContentLoaded', function() {
+    // Фикс для мобильного скролла
+    function fixMobileScroll() {
+        if (window.innerWidth < 768) {
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.style.overflowX = 'hidden';
+        }
+    }
+    
+    fixMobileScroll();
+    window.addEventListener('resize', fixMobileScroll);
+    
+    // Дополнительно: закрываем меню при клике на ссылку
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            const navbar = document.querySelector('.navbar-collapse');
+            if (navbar.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(navbar).hide();
             }
         });
     });
